@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
-import profilePic from '../profile.png';
+import githubIcon from '../icons/github_icon.svg';
+import linkedlnIcon from '../icons/linkedln_icon.png';
+import mePic from '../icons/me_picture.JPG';
+import emailIcon from '../icons/email_icon.png';
 
 function Name() {
   return <h2>Jakob Au</h2>;
 }
 
 function SocialLinks(props) {
-  return <h5><a href="https://www.github.com/jakobau" target="_blank">Github</a> | <a target="_blank" href="https://www.linkedin.com/in/jakob-au">Linkedin</a></h5>;
+  return (
+    <h5>
+      <a href="https://www.github.com/jakobau" target="_blank"  rel="noopener noreferrer">
+        <img id="profile-icon" src={githubIcon} alt=""/>Github</a>
+      <a href="https://www.linkedin.com/in/jakob-au" target="_blank" rel="noopener noreferrer">
+        <img id="profile-icon-linkedin" src={linkedlnIcon} alt=""/>LinkedIn</a>
+      <a href="mailto:jda92@drexel.edu" rel="noopener noreferrer">
+        <img id="profile-icon-linkedin" src={emailIcon} alt=""/>Email Me</a>
+    </h5>
+  );
 }
 
 function Short(props) {
-  return <span>Student @ Drexel University</span>;
+  return <div className="padding-top" id="profile-description">Software Engineering Student at Drexel University</div>;
 }
 
 export default class Profile extends Component {
@@ -23,7 +35,7 @@ export default class Profile extends Component {
           <Short />
         </div>
         <div className="frame">
-          <img id="profile-pic" src={profilePic}></img>
+          <img id="profile-pic" src={mePic} alt=""/>
         </div>
       </div>
     );

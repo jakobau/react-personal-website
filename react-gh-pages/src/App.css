@@ -17,12 +17,6 @@ html {
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #fcf2e3;
   min-height: 100vh;
@@ -32,19 +26,6 @@ html {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #4d4a46;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 #parent {
@@ -58,24 +39,13 @@ html {
   display: flex;
 }
 
-h1 {
-  padding: 0;
+h1, h2, h3, h4, h5{
   margin: 0;
 }
 
-h2 {
-  padding: 0;
-  margin: 0;
-}
-
-h3 {
-  padding: 0;
-  margin: 0;
-}
-
-h4 {
-  padding: 0;
-  margin: 0;
+h5 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #smaller {
@@ -98,12 +68,6 @@ h4 {
   flex-wrap: wrap;
 }
 
-.top-of-page {
-  margin: 50px;
-  margin-top: 60px;
-  transition: 0.4s;
-}
-
 #top {
   transition: 0.4s;
 }
@@ -117,6 +81,7 @@ a {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
+  color: #6c1a91;
 }
 
 .projectLink a:link {
@@ -152,21 +117,50 @@ a {
   margin-top: 100px;
   margin-bottom: 50px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .frame {
   display:flex;
   align-items: center;
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 #profile-pic {
   width: 200px;
-  height: 200px;
+  height: auto;
+  margin-top: 15px;
+  -webkit-clip-path: circle(47% at center);
 }
 
 #profile-name {
   text-align: left;
   margin-left: 30px;
+}
+
+#profile-icon {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+}
+
+#profile-icon-linkedin {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
+  padding-left: 15px;
+}
+
+#profile-description {
+  max-width: 400px;
+}
+
+.padding-top {
+  padding-top: 10px;
+}
+
+.footer {
+  padding: 50px;
 }
 
 /*------- Responsive CSS Style -------*/
@@ -179,7 +173,16 @@ a {
   .label { margin: 5px; }
   #profile-pic {
     width: 100px;
-    height: 100px;
+    height: auto;
+  }
+  .profile {
+    margin-bottom: 0px;
+  }
+  .footer {
+    padding: 25px;
+  }
+  .profile {
+    margin-top: 75px;
   }
 }
 

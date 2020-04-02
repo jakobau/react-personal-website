@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Section from './components/section';
 import Profile from './components/profile';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
       <header className="App-header">
         <Profile />
         <Section />
-        <a className="top-of-page" href="#top">^ top of screen</a>
       </header>
+      <Footer />
     </div>
   );
 }
