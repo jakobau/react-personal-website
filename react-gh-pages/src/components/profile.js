@@ -11,9 +11,9 @@ function Name() {
 function SocialLinks(props) {
   return (
     <h5>
-      <a href="https://www.github.com/jakobau" target="_blank"  rel="noopener noreferrer">
+      <a href="https://www.github.com/jakobau" rel="noopener noreferrer">
         <img id="profile-icon" src={githubIcon} alt=""/>Github</a>
-      <a href="https://www.linkedin.com/in/jakob-au" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/jakob-au" rel="noopener noreferrer">
         <img id="profile-icon-linkedin" src={linkedlnIcon} alt=""/>LinkedIn</a>
       <a href="mailto:jda92@drexel.edu" rel="noopener noreferrer">
         <img id="profile-icon-linkedin" src={emailIcon} alt=""/>Email Me</a>
