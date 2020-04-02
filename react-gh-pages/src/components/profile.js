@@ -6,7 +6,7 @@ function Name() {
 }
 
 function SocialLinks(props) {
-  return <h5>Github | Linkedin | Resume</h5>;
+  return <h5><a href="https://www.github.com/jakobau" target="_blank">Github</a> | <a target="_blank" href="https://www.linkedin.com/in/jakob-au">Linkedin</a></h5>;
 }
 
 function Short(props) {
