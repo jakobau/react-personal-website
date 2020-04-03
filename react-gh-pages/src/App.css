@@ -26,6 +26,7 @@ html {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #4d4a46;
+  padding-bottom: 100px;
 }
 
 #parent {
@@ -163,6 +164,29 @@ a {
   padding: 50px;
 }
 
+#skill-section {
+  text-align: left;
+  padding: 30px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.jobs {
+  text-align: left;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.job-section {
+  width: 350px;
+}
+
 /*------- Responsive CSS Style -------*/
 
 @media screen and (max-width: 399px) {
@@ -183,6 +207,9 @@ a {
   }
   .profile {
     margin-top: 75px;
+  }
+  #skill-section {
+    width: 30%;
   }
 }
 

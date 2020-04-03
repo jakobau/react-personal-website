@@ -37,7 +37,7 @@ export default class Section extends Component {
     return (
       <div id="parent">
         <div id="title"><hr/>
-          <h2>&#187;Projects</h2>
+          <h2>&#187; Projects</h2>
         </div>
         <div id="section">
           <div id="date">
