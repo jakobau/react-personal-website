@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+
+//get icons
 import githubIcon from '../icons/github_icon.svg';
 import linkedlnIcon from '../icons/linkedln_icon.png';
 import mePic from '../icons/me_picture.JPG';
 import emailIcon from '../icons/email_icon.png';
 
+//Just name
 function Name() {
   return <h2>Jakob Au</h2>;
 }
 
+//all social links
 function SocialLinks(props) {
   return (
     <h5>
@@ -21,6 +25,7 @@ function SocialLinks(props) {
   );
 }
 
+//short description
 function Short(props) {
   return <div className="padding-top" id="profile-description">Software Engineering Student at Drexel University</div>;
 }

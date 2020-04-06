@@ -12,13 +12,12 @@ import Footer from './components/footer';
 
 import resumePDF from './icons/software_engineer_resume.pdf';
 
-ReactGA.initialize('UA-162783096-1');
+ReactGA.initialize('UA-162783096-1'); //init Google Analytics
 
 function App() {
-  useEffect(() => {
+  useEffect(() => { //onload pageview count
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
-
   return (
     <div className="App" style={{backgroundColor: '#f7e7cd'}}>
       <span id="top"></span>

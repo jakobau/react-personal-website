@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// Job section blueprint
 function Job(props) {
   return (
     <div className="jobs">

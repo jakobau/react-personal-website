@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//skill category
 function Skill(props) {
   return (
     <div>
@@ -8,6 +9,7 @@ function Skill(props) {
   );
 }
 
+//individual skill name
 function SkillPoint(props) {
   return (
     <div id="smaller">{props.point}</div>

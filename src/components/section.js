@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+//title of project
 function Title(props) {
   return (
     <h2>
@@ -8,22 +9,27 @@ function Title(props) {
   );
 }
 
+//date project was completed in
 function Date(props) {
   return <span>{props.date}</span>;
 }
 
+//longer title
 function Short(props) {
   return <h4><em>{props.desc}</em></h4>;
 }
 
+//all relavent languages and tools used in project
 function Label(props) {
   return <span className="label">{props.label}</span>;
 }
 
+//short description of project
 function Desc(props) {
   return <span className="description">{props.desc}</span>;
 }
 
+//project demo link
 function Demo(props) {
   return (
     <div className="projectLink padding-top">
