@@ -10,6 +10,8 @@ import Skills from './components/skills';
 import Experience from './components/experience';
 import Footer from './components/footer';
 
+import resumePDF from './icons/software_engineer_resume.pdf';
+
 ReactGA.initialize('UA-162783096-1');
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
         <Section />
         <Skills />
         <Experience />
+        <a href={resumePDF} target="_blank" rel="noopener noreferrer">Get My Resume</a>
       </header>
       <Footer />
     </div>
