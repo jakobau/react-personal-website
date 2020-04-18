@@ -45,6 +45,25 @@ export default class Section extends Component {
         <div id="title"><hr/>
           <h2>&#187; Projects</h2>
         </div>
+
+        <div id="section">
+          <div id="date">
+            <Date date="2020" />
+          </div>
+          <div>
+            <Title name="easter-wegg-site" link="http://egghunt.jakobau.me/" />
+            <Short desc="online easter egg hunt" />
+            <div id="labels">
+              <Label label="Node.js" />
+              <Label label="Socket.io" />
+              <Label label="AWS EC2" />
+              <Label label="JavaScript" />
+              <Label label="CSS" />
+            </div>
+            <Desc desc="Enjoy easter hunting while practicing social distancing. Created for my family who usually has easter egg hunts." />
+          </div>
+        </div>
+
         <div id="section">
           <div id="date">
             <Date date="2020" />
