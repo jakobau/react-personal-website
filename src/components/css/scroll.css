@@ -1,0 +1,6 @@
+.scroll {
+  background-color: blue;
+  opacity: 0.5;
+  flex: 1;
+  height: 100vh;
+}

@@ -1,0 +1,10 @@
+.name {
+  background-color: pink;
+  opacity: 0.5;
+  flex: 1;
+  height: 100vh;
+}
+
+.name::before {
+
+}
