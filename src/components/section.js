@@ -51,8 +51,43 @@ export default class Section extends Component {
             <Date date="2020" />
           </div>
           <div>
+            <Title name="keiki-heroes" link="/" />
+            <Short desc="Hawaii STEM Community Care Project" />
+            <div id="labels">
+              <Label label="JavaScript" />
+              <Label label="Discord.js" />
+              <Label label="Node.js" />
+              <Label label="A2 Hosting" />
+            </div>
+            <Desc desc="Keiki Heroes is a community and school health initiative in response to COVID. I am the web developer, graphic designer,
+            and representative." />
+          </div>
+        </div>
+
+        <div id="section">
+          <div id="date">
+            <Date date="2020" />
+          </div>
+          <div>
+            <Title name="t3-alliance-course-bot" link="/" />
+            <Short desc="T3 Alliance Discord Bot" />
+            <div id="labels">
+              <Label label="JavaScript" />
+              <Label label="Discord.js" />
+              <Label label="Node.js" />
+              <Label label="A2 Hosting" />
+            </div>
+            <Desc desc="Creating and managing T3 Alliance's exclusive discord server with a custom Discord bot connecting their WordPress LearnDash website with the server." />
+          </div>
+        </div>
+
+        <div id="section">
+          <div id="date">
+            <Date date="2020" />
+          </div>
+          <div>
             <Title name="easter-wegg-site" link="http://egghunt.jakobau.me/" />
-            <Short desc="online easter egg hunt" />
+            <Short desc="Online Easter Egg Hunt" />
             <div id="labels">
               <Label label="Node.js" />
               <Label label="Socket.io" />
@@ -60,7 +95,7 @@ export default class Section extends Component {
               <Label label="JavaScript" />
               <Label label="CSS" />
             </div>
-            <Desc desc="Enjoy easter hunting while practicing social distancing. Created for my family who usually has easter egg hunts." />
+            <Desc desc="Enjoy easter hunting while practicing social distancing. Created for my family who usually has family easter egg hunts." />
           </div>
         </div>
 
@@ -70,7 +105,7 @@ export default class Section extends Component {
           </div>
           <div>
             <Title name="react-personal-website" link="https://github.com/jakobau/react-personal-website" />
-            <Short desc="my website resume" />
+            <Short desc="Personal Website Resume" />
             <div id="labels">
               <Label label="React" />
               <Label label="Node.js" />
@@ -89,13 +124,13 @@ export default class Section extends Component {
           </div>
           <div>
             <Title name="discord-bot" link="https://github.com/jakobau/discordbot" />
-            <Short desc="general discord bot" />
+            <Short desc="Fun Discord Bot" />
             <div id="labels">
               <Label label="Discord.js" />
               <Label label="JavaScript" />
               <Label label="Node.js" />
             </div>
-            <Desc desc="Play music, manage roles, and announcements." />
+            <Desc desc="Play music, manage roles, irritate friends..." />
           </div>
         </div>
 
@@ -105,7 +140,7 @@ export default class Section extends Component {
           </div>
           <div>
             <Title name="Twitterphile" link="https://github.com/MattD0312/twitter-profile-summarizer" />
-            <Short desc="use of the Twitter API on a web app" />
+            <Short desc="DragonHacks 2020 Project" />
             <div id="labels">
               <Label label="Node.js" />
               <Label label="Express" />
@@ -115,7 +150,7 @@ export default class Section extends Component {
               <Label label="Heroku" />
               <Label label="Twitter API" />
             </div>
-            <Desc desc="Our DragonHacks 2020 project. Displays most recently used hashtags and words of a twitter username." />
+            <Desc desc="Use of the Twitter API on a web app. Displays most recently used hashtags and words of a twitter username." />
             <Demo link="https://twitterphile.herokuapp.com/" />
           </div>
         </div>
@@ -126,7 +161,7 @@ export default class Section extends Component {
           </div>
           <div>
             <Title name="IMDrexel" link="https://github.com/jakobau/IMDrexel" />
-            <Short desc="redesign of IMLeagues" />
+            <Short desc="Redesign of IMLeagues" />
             <div id="labels">
               <Label label="Node.js" />
               <Label label="Express" />
@@ -146,7 +181,7 @@ export default class Section extends Component {
           </div>
           <div>
             <Title name="Fantazmix" link="https://github.com/jakobau/fantasmix" />
-            <Short desc="music generating web app" />
+            <Short desc="AI Music Generating Web App" />
             <div id="labels">
               <Label label="Django" />
               <Label label="Python" />

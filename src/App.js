@@ -19,14 +19,14 @@ function App() {
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
   return (
-    <div className="App" style={{backgroundColor: '#f7e7cd'}}>
+    <div className="App" style={{ backgroundColor: '#f7e7cd' }}>
       <span id="top"></span>
       <header className="App-header">
         <Profile />
         <Section />
         <Skills />
         <Experience />
-        <a href={resumePDF} target="_blank" rel="noopener noreferrer">Get My Resume</a>
+        <a href={ resumePDF } target="_blank" rel="noopener noreferrer">Resume</a>
       </header>
       <Footer />
     </div>
