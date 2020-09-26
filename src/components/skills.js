@@ -26,10 +26,11 @@ export default class Skills extends Component {
         <div className="skills">
           <div id="skill-section">
             <Skill title="Languages"/>
-            <SkillPoint point="JavaScript (ES6)" />
+            <SkillPoint point="JavaScript" />
             <SkillPoint point="Python" />
             <SkillPoint point="HTML" />
             <SkillPoint point="CSS" />
+            <SkillPoint point="PHP" />
             <SkillPoint point="Java" />
             <SkillPoint point="SQL" />
             <SkillPoint point="C#" />
@@ -42,6 +43,9 @@ export default class Skills extends Component {
           </div>
           <div id="skill-section">
             <Skill title="Tools"/>
+            <SkillPoint point="WordPress" />
+            <SkillPoint point="Bubble.io" />
+            <SkillPoint point="Expression Engine" />
             <SkillPoint point="Git + Github" />
             <SkillPoint point="Bash" />
           </div>
@@ -49,7 +53,7 @@ export default class Skills extends Component {
             <Skill title="Design"/>
             <SkillPoint point="Sketch" />
             <SkillPoint point="InVision" />
-            <SkillPoint point="Wireframing" />
+            <SkillPoint point="Adobe Illustrator" />
           </div>
         </div>
       </div>
