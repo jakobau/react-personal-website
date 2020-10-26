@@ -51,7 +51,7 @@ export default class Section extends Component {
             <Date date="2020" />
           </div>
           <div>
-            <Title name="keiki-heroes" link="/" />
+            <Title name="keiki-heroes" link="https://www.keikiheroes.org/" />
             <Short desc="Hawaii STEM Community Care Project" />
             <div id="labels">
               <Label label="JavaScript" />
@@ -69,7 +69,7 @@ export default class Section extends Component {
             <Date date="2020" />
           </div>
           <div>
-            <Title name="t3-alliance-course-bot" link="/" />
+            <Title name="t3-alliance-course-bot" link="https://t3alliance.org/discord-instructions/" />
             <Short desc="T3 Alliance Discord Bot" />
             <div id="labels">
               <Label label="JavaScript" />
