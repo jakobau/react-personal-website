@@ -3,36 +3,51 @@ import './App.css';
 
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
-import Section from './components/section';
-import Profile from './components/profile';
-import Skills from './components/skills';
-import Experience from './components/experience';
-import Footer from './components/footer';
 
-import resumePDF from './icons/software_engineer_resume.pdf';
+import LandingPage from './components/landingPage';
+import Resume from './components/resume';
 
 ReactGA.initialize('UA-162783096-1'); //init Google Analytics
 
-function App() {
+/*function App() {
   useEffect(() => { //onload pageview count
     ReactGA.pageview(window.location.pathname + window.location.search)
   }, [])
   return (
-    <div className="App" style={{ backgroundColor: '#f7e7cd' }}>
-      <span id="top"></span>
-      <header className="App-header">
-        <Profile />
-        <Section />
-        <Skills />
-        <Experience />
-        <a href={ resumePDF } target="_blank" rel="noopener noreferrer">Resume</a>
-      </header>
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" ><landingPage /></Route>
+        <Route path="/resume" ><resume /></Route>
+      </Switch>
+    </Router>
+  );
+}*/
+
+export default function App() {
+  return (
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/resume">resume</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <hr />
+
+      {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+      <Switch>
+        <Route exact path="/" ><LandingPage /></Route>
+        <Route path="/resume" ><Resume /></Route>
+      </Switch>
+    </Router>
   );
 }
 
-
-
-export default App;
