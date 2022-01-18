@@ -28,18 +28,16 @@ ReactGA.initialize('UA-162783096-1'); //init Google Analytics
 export default function App() {
   return (
     <Router>
-      <nav>
+      {/*<nav>
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/resume">resume</Link>
+            <Link to="/resume">Website v2</Link>
           </li>
         </ul>
-      </nav>
-
-      <hr />
+      </nav>/*}
 
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
