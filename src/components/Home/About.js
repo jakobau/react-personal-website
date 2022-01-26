@@ -1,5 +1,4 @@
 import React from "react";
-import './Styles/Home.css';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
@@ -7,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 
-import mePic from '../../media/me_picture2.jpg';
-import mePic2 from '../../media/me_picture3.jpg';
+import mePic from '../../media/me_picture.JPG';
+import mePic2 from '../../media/me_picture2.jpg';
 import Footer from './Footer.js';
 import Hyperlink from './Hyperlink.js';
 
