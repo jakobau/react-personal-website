@@ -1,14 +1,14 @@
 import React from 'react';
 
 //components
-import Section from './resume_components/section';
-import Profile from './resume_components/profile';
-import Skills from './resume_components/skills';
-import Experience from './resume_components/experience';
-import Footer from './resume_components/footer';
+import Section from './section';
+import Profile from './profile';
+import Skills from './skills';
+import Experience from './experience';
+import Footer from './footer';
 
 //images
-import resumePDF from '.././icons/software_engineer_resume.pdf';
+import resumePDF from '../../media/software_engineer_resume.pdf';
 
 const Resume = () => {
   return (

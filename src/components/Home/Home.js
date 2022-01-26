@@ -35,8 +35,8 @@ import SkillTag from './SkillTag.js';
 import PortfolioItem from './PortfolioItem.js';
 
 // Media imports
-import mePic from '../../media/me_picture2.jpg';
-import mePic2 from '../../media/me_picture3.jpg';
+import mePic from '../../media/me_picture.JPG';
+import mePic2 from '../../media/me_picture2.jpg';
 
 
 // Changable Links

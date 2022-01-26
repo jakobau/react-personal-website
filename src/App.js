@@ -12,20 +12,6 @@ import Portfolio from './components/Home/Portfolio';
 
 ReactGA.initialize('UA-162783096-1'); //init Google Analytics
 
-/*function App() {
-  useEffect(() => { //onload pageview count
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }, [])
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/" ><landingPage /></Route>
-        <Route path="/resume" ><resume /></Route>
-      </Switch>
-    </Router>
-  );
-}*/
-
 export default function App() {
   return (
     <Router>
@@ -43,7 +29,7 @@ export default function App() {
       {/* A <Switch> looks through its children <Route>s and
           renders the first one that matches the current URL. */}
       <Switch>
-        <Route exact path="/" ><LandingPage /></Route>
+        <Route exact path="/" ><Home /></Route>
         <Route path="/resume" ><Resume /></Route>
         <Route path="/portfolio" ><Portfolio /></Route>
         <Route path="/about" ><About /></Route>

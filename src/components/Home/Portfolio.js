@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
-import mePic2 from '../../media/me_picture3.jpg';
+import mePic2 from '../../media/me_picture2.jpg';
 import Footer from './Footer.js';
 
 function srcset(image, size, rows = 1, cols = 1) {
