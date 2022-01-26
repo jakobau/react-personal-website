@@ -6,8 +6,15 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 
+<<<<<<< Updated upstream
 import LandingPage from './components/landingPage';
 import Resume from './components/resume';
+=======
+import Home from './components/Home/Home';
+import About from './components/Home/About';
+import Resume from './components/Resume/resume';
+import Portfolio from './components/Home/Portfolio';
+>>>>>>> Stashed changes
 
 ReactGA.initialize('UA-162783096-1'); //init Google Analytics
 
@@ -44,6 +51,8 @@ export default function App() {
       <Switch>
         <Route exact path="/" ><LandingPage /></Route>
         <Route path="/resume" ><Resume /></Route>
+        <Route path="/portfolio" ><Portfolio /></Route>
+        <Route path="/about" ><About /></Route>
       </Switch>
     </Router>
   );
