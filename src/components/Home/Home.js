@@ -11,7 +11,7 @@
 // - Portfolio items
 // - 
 
-// first imports
+// REACT imports
 import React from "react";
 import './Styles/Home.css';
 
@@ -37,6 +37,8 @@ import PortfolioItem from './PortfolioItem.js';
 // Media imports
 import mePic from '../../media/me_picture.JPG';
 import mePic2 from '../../media/me_picture2.jpg';
+import keikiheroes1 from '../../media/projectPictures/keikiHeroes_pic1.png';
+import t3Alliance1 from '../../media/projectPictures/t3Alliance_pic1.png';
 
 
 // Changable Links
@@ -142,14 +144,23 @@ const Home = () => {
           flexDirection: 'row',
           alignItems: { xs: 'center'},
           flexWrap: 'wrap',
-          mt:5,
         }}
       >
         <PortfolioItem
-          title="Keiki Heroes Co-Founder"
-          index="1"
+          title="Keiki Heroes"
+          role="Co-Founder at"
+          index="01"
           description="An initial website to kickstart the Keiki Heroes campaign in Wordpress."
-          media=""
+          media={keikiheroes1}
+          projectRoute="/projects/keikiheroes"
+        />
+        <PortfolioItem
+          title="T3 Alliance"
+          role="Discord Lead and R&D at"
+          index="02"
+          description="Developed a custom Discord bot, web dev committee member, spokesperson at various events, and Discord server manager."
+          media={t3Alliance1}
+          projectRoute="/projects/t3alliance"
         />
       </Box>
 
