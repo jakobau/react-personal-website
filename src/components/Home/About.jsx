@@ -8,8 +8,8 @@ import Tooltip from '@mui/material/Tooltip';
 
 import mePic from '../../media/me_picture.JPG';
 import mePic2 from '../../media/me_picture2.jpg';
-import Footer from './Footer.js';
-import Hyperlink from './Hyperlink.js';
+import Footer from './Footer.jsx';
+import Hyperlink from './Hyperlink.jsx';
 
 //Changable Links
 const IkanosMarketingLink = "https://drexel.edu/baiada/companies/current/Ikanos%20Marketing/";

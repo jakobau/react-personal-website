@@ -11,7 +11,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 import mePic2 from '../../media/me_picture2.jpg';
-import Footer from './Footer.js';
+import Footer from './Footer.jsx';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
