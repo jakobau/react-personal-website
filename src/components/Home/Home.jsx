@@ -5,12 +5,8 @@
 // Name: Home.js
 // Purpose: Landing Page.
 // <<
-//
-// TODO
-// - Portfolio items
-// - 
 
-// REACT imports
+// REACT Imports
 import React from "react";
 import { useRef } from "react";
 import './Styles/Home.css';
@@ -24,12 +20,14 @@ import Link from '@mui/material/Link';
 import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
 import { alpha } from '@mui/material/styles';
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
+
+// MUI Icon Imports
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
-// Component imports
+// Component Imports
 import Footer from './Footer.jsx';
 import Hyperlink from './Hyperlink.jsx';
 import SkillTag from './SkillTag.jsx';
@@ -42,6 +40,7 @@ import keikiheroes1 from '../../media/projectPictures/keikiHeroes_pic1.png';
 import t3Alliance1 from '../../media/projectPictures/t3Alliance_pic1.png';
 
 // Changable Links
+const PersonalProjectLink = "https://www.jakobau.me"
 const IkanosMarketingLink = "https://drexel.edu/baiada/companies/current/Ikanos%20Marketing/";
 const DrexelUniversityLink = "https://drexel.edu";
 const KeikiHeroesLink = "https://www.keikiheroes.org/";
@@ -78,7 +77,7 @@ export default function Home() {
               mt:10,
             }}
           >
-            <Chip label="WEB PROJECTS" />
+            <Chip label="PROJECTS" />
           </Divider>
           <div ></div>
 
@@ -100,6 +99,14 @@ export default function Home() {
             media={keikiheroes1}
             projectRoute="/projects/portfolioWebsite"
             skills={["ReactJS","MaterialUI","Google Analytics"]}
+            idea="I started this project to kick start my Front-End and web development experience by 
+              learning and exploring with ReactJS while creating a portfolio to share my personal projects.
+              I created this project in 2020 and am currently on my 4th version."
+            links={[
+              {title:"Personal Link", link:PersonalProjectLink},
+              {title:"GitHub Link", link:GitHubLink},
+            ]}
+            timeline="2020 - Now"
           />
 
           <PortfolioItem
@@ -111,6 +118,12 @@ export default function Home() {
             media={t3Alliance1}
             projectRoute="/projects/t3alliance"
             skills={["Javascript","DiscordJS","Public-Speaking","Wordpress"]}
+            idea="I"
+            links={[
+              {title:"Personal Link", link:PersonalProjectLink},
+              {title:"GitHub Link", link:GitHubLink},
+            ]}
+            timeline="2020 - 2021 (1 yr 5 mos)"
           />
           <PortfolioItem
             title="NexTech Hawaii"
@@ -121,6 +134,12 @@ export default function Home() {
             media={t3Alliance1}
             projectRoute="/projects/nextech"
             skills={["VueJS","Javascript","Bootstrap"]}
+            idea="I"
+            links={[
+              {title:"Personal Link", link:PersonalProjectLink},
+              {title:"GitHub Link", link:GitHubLink},
+            ]}
+            timeline="2020 - Now"
           />
           <PortfolioItem
             title="Easter Wegg Hunt"
@@ -131,6 +150,12 @@ export default function Home() {
             media={t3Alliance1}
             projectRoute="/projects/easter-wegg-hunt"
             skills={["NodeJS","Javascript","SocketIO"]}
+            idea="I"
+            links={[
+              {title:"Personal Link", link:PersonalProjectLink},
+              {title:"GitHub Link", link:GitHubLink},
+            ]}
+            timeline="2020 - Now"
           />
           <PortfolioItem
             title="Health Together"
@@ -141,6 +166,12 @@ export default function Home() {
             media={t3Alliance1}
             projectRoute="/projects/health-together"
             skills={["ReactNative","Javascript","App Development"]}
+            idea="I"
+            links={[
+              {title:"Personal Link", link:PersonalProjectLink},
+              {title:"GitHub Link", link:GitHubLink},
+            ]}
+            timeline="2020 - 2021 (1 yr 5 mos)"
           />
           
         </Box>
