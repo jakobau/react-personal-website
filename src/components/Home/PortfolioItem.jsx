@@ -58,7 +58,7 @@ function PortfolioItem(props) {
         direction="left" 
         in={open}
         style={{ transformOrigin: '0 0 0' }}
-        {...(open ? { timeout: 500*index } : {  })}
+        {...(open ? { timeout: 500*index } : { timeout: 300 })}
         mountOnEnter
         unmountOnExit
         onExiting={(node) => { 
@@ -168,7 +168,7 @@ function PortfolioItem(props) {
         direction="right" 
         in={!open}
         style={{ transformOrigin: '0 0 0' }}
-        {...(!open ? { timeout: 500 } : { timeout:-100})}
+        {...(!open ? { timeout: 500 } : { timeout: 300 })}
         mountOnEnter 
         unmountOnExit
       >
@@ -201,7 +201,7 @@ function PortfolioItem(props) {
             <Typography variant="body" mt={2}>{idea}</Typography>
 
             <Typography variant="h5" mt={2} color="purple">
-              Built with:
+              Utilized:
             </Typography>
 
             {/* skill tags */}
@@ -224,12 +224,14 @@ function PortfolioItem(props) {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: { xs: 'center'},
+                alignItems: 'right',
                 flexWrap: 'wrap',
+                ml:10,
+                mr:5,
               }}
             >
             {links.map((item) => (
-              <Link href={item.link}>{item.title}</Link>
+              <Link href={item.link} sx={{p:0.5,}}>{item.title}</Link>
             ))}
           </Box>
 
