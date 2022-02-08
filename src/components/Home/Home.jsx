@@ -64,6 +64,18 @@ const InstagramLink = "https://www.instagram.com/jakob.au/?hl=en";
 const LinkedInLink = "http://linkedin.com/in/jakob-au";
 const GitHubLink = "http://github.com/jakobau";
 
+// Google Analytics tracking links clicked
+function GA_event(name) {
+  const sendOutbound = (event) => {
+    event.preventDefault();
+    ReactGA.event({
+      category: 'Links',
+      action: name,
+      label: name + ' link clicked'
+    });
+  }
+}
+
 // Main exported function
 export default function Home() {
 
@@ -78,18 +90,6 @@ export default function Home() {
   window.addEventListener('scroll', (event) => {
     setShowProjects(true);
   });
-
-  // Google Analytics tracking links clicked
-  function GA_event(name) {
-    const sendOutbound = (event) => {
-      event.preventDefault();
-      ReactGA.event({
-        category: 'Links',
-        action: name,
-        label: name + ' link clicked'
-      });
-    }
-  }
 
   function Projects() {
     if(showProjects) {
