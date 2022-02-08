@@ -9,8 +9,8 @@
 
 // REACT imports
 import * as React from 'react';
+import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
-//import { Link } from 'react-router-dom';
 
 // MUI Imports
 import Box from '@mui/material/Box';
@@ -26,7 +26,6 @@ import Link from '@mui/material/Link';
 // MUI Icon Imports
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CloseIcon from '@mui/icons-material/Close';
-//import TimelineIcon from '@mui/icons-material/Timeline';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 // Component Imports
@@ -40,8 +39,19 @@ function PortfolioItem(props) {
 
   const handleChange = () => {
     setOpen((prev) => !prev);
+
+    // Google Analytics track opened project
+    const temp = title + " project opened";
+    if(open) {
+      ReactGA.event({
+      category: 'Projects',
+      action: title,
+      label: temp,
+      value: 1
+    });
+    }
   };
-  
+
   return (
     <Box
       sx={{
@@ -58,7 +68,7 @@ function PortfolioItem(props) {
         direction="left" 
         in={open}
         style={{ transformOrigin: '0 0 0' }}
-        {...(open ? { timeout: 500*index } : {  })}
+        {...(open ? { timeout: 500*index } : { timeout: 300 })}
         mountOnEnter
         unmountOnExit
         onExiting={(node) => { 
@@ -113,7 +123,6 @@ function PortfolioItem(props) {
                   flexDirection: 'row',
                   width: { xs: 200, sm: 300, md: 400, lg: 500, },
                   flexWrap: 'wrap',
-
                 }}
               >
                 <AccessTimeIcon fontSize="large" />
@@ -168,7 +177,7 @@ function PortfolioItem(props) {
         direction="right" 
         in={!open}
         style={{ transformOrigin: '0 0 0' }}
-        {...(!open ? { timeout: 500 } : { timeout:-100})}
+        {...(!open ? { timeout: 500 } : { timeout: 300 })}
         mountOnEnter 
         unmountOnExit
       >
@@ -201,7 +210,7 @@ function PortfolioItem(props) {
             <Typography variant="body" mt={2}>{idea}</Typography>
 
             <Typography variant="h5" mt={2} color="purple">
-              Built with:
+              Utilized:
             </Typography>
 
             {/* skill tags */}
@@ -224,12 +233,14 @@ function PortfolioItem(props) {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: { xs: 'center'},
+                alignItems: 'right',
                 flexWrap: 'wrap',
+                ml:10,
+                mr:5,
               }}
             >
             {links.map((item) => (
-              <Link href={item.link}>{item.title}</Link>
+              <Link href={item.link} sx={{p:0.5,}}>{item.title}</Link>
             ))}
           </Box>
 
@@ -251,6 +262,7 @@ function PortfolioItem(props) {
   );
 }
 
+// required property data
 PortfolioItem.propTypes = {
   title: PropTypes.string.isRequired,
   index: PropTypes.string.isRequired,
