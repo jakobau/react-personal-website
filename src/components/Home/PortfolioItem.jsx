@@ -113,7 +113,6 @@ function PortfolioItem(props) {
                   flexDirection: 'row',
                   width: { xs: 200, sm: 300, md: 400, lg: 500, },
                   flexWrap: 'wrap',
-
                 }}
               >
                 <AccessTimeIcon fontSize="large" />

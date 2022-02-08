@@ -25,6 +25,9 @@ ReactGA.initialize('UA-162783096-1');
 
 // Main exported function
 export default function App() {
+  useEffect(() => { //onload pageview count
+    ReactGA.pageview(window.location.pathname + window.location.search)
+  }, [])
   return (
     <Router>
       {/* A <Switch> looks through its children <Route>s and
