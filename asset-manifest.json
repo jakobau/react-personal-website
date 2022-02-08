@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a56aabb1.css",
-    "main.js": "/static/js/main.9b094593.js",
+    "main.js": "/static/js/main.1cdad1a9.js",
     "static/media/weggHunt.gif": "/static/media/weggHunt.b13b3d8fd02125f47701.gif",
     "static/media/nextech_pic1.png": "/static/media/nextech_pic1.bf077855e10fdf0f50d5.png",
     "static/media/personalWebsite_gif1.gif": "/static/media/personalWebsite_gif1.de8d10fa843a1c54dd0d.gif",
@@ -16,10 +16,10 @@
     "static/media/github_icon.svg": "/static/media/github_icon.9c0b26d398b6096b583700f91bfb7312.svg",
     "index.html": "/index.html",
     "main.a56aabb1.css.map": "/static/css/main.a56aabb1.css.map",
-    "main.9b094593.js.map": "/static/js/main.9b094593.js.map"
+    "main.1cdad1a9.js.map": "/static/js/main.1cdad1a9.js.map"
   },
   "entrypoints": [
     "static/css/main.a56aabb1.css",
-    "static/js/main.9b094593.js"
+    "static/js/main.1cdad1a9.js"
   ]
 }
