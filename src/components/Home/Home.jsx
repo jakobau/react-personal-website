@@ -10,6 +10,7 @@
 // REACT Imports
 import React from "react";
 import { useRef } from "react";
+import ReactGA from 'react-ga';
 import './Styles/Home.css';
 
 // MUI Imports
@@ -77,6 +78,18 @@ export default function Home() {
   window.addEventListener('scroll', (event) => {
     setShowProjects(true);
   });
+
+  // Google Analytics tracking links clicked
+  function GA_event(name) {
+    const sendOutbound = (event) => {
+      event.preventDefault();
+      ReactGA.event({
+        category: 'Links',
+        action: name,
+        label: name + ' link clicked'
+      });
+    }
+  }
 
   function Projects() {
     if(showProjects) {
@@ -252,7 +265,7 @@ export default function Home() {
     } else {
 
       return(
-        <Link onClick={scrollDown} style={{ color: 'inherit', }} >
+        <Link  onClick={GA_event("scroll down")} onClick={scrollDown} style={{ color: 'inherit', }} >
           <Box
             sx={{
               display: 'flex',
@@ -349,10 +362,10 @@ export default function Home() {
                   fontSize: {xs:20,sm:20,md:22,lg:22}, 
                 }}
               >
-              <Link color="inherit" href="http://linkedin.com/in/jakob-au">
+              <Link onClick={GA_event("linkedin")} color="inherit" href="http://linkedin.com/in/jakob-au">
                 <LinkedInIcon fontSize="large"></LinkedInIcon>
               </Link>
-              <Link color="inherit" href="https://github.com/jakobau/react-personal-website">
+              <Link onClick={GA_event("github_personal_website")} color="inherit" href="https://github.com/jakobau/react-personal-website">
                 <GitHubIcon fontSize="large"></GitHubIcon>
               </Link>
               <Typography variant="h5" mt={0.5} ml={1}>Jakob Au</Typography>
