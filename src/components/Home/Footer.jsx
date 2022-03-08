@@ -26,20 +26,20 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+// Google Analytics tracking links clicked
+function GA_event(name) {
+  const sendOutbound = (event) => {
+    event.preventDefault();
+    ReactGA.event({
+      category: 'Links',
+      action: name,
+      label: name + ' link clicked'
+    });
+  }
+}
+
 function Footer(props) {
   const { description, title } = props;
-
-  // Google Analytics tracking links clicked
-  function GA_event(name) {
-    const sendOutbound = (event) => {
-      event.preventDefault();
-      ReactGA.event({
-        category: 'Links',
-        action: name,
-        label: name + ' link clicked'
-      });
-    }
-  }
 
   function Copyright() {
     return (

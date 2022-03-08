@@ -64,6 +64,20 @@ const InstagramLink = "https://www.instagram.com/jakob.au/?hl=en";
 const LinkedInLink = "http://linkedin.com/in/jakob-au";
 const GitHubLink = "http://github.com/jakobau";
 
+// CURRENTLY DISABLED
+// Google Analytics tracking links clicked
+function GA_event(name) {
+  console.log("clicked" + name);
+  /*const sendOutbound = (event) => {
+    event.preventDefault();
+    ReactGA.event({
+      category: 'Links',
+      action: name,
+      label: name + ' link clicked'
+    });
+  }*/
+}
+
 // Main exported function
 export default function Home() {
 
@@ -78,18 +92,6 @@ export default function Home() {
   window.addEventListener('scroll', (event) => {
     setShowProjects(true);
   });
-
-  // Google Analytics tracking links clicked
-  function GA_event(name) {
-    const sendOutbound = (event) => {
-      event.preventDefault();
-      ReactGA.event({
-        category: 'Links',
-        action: name,
-        label: name + ' link clicked'
-      });
-    }
-  }
 
   function Projects() {
     if(showProjects) {
@@ -169,6 +171,7 @@ export default function Home() {
               getting up and moving around. There are lots of suprises in store!"
             links={[
               {title:"See Example", link:"/projects/easter-wegg-hunt"},
+              {title:"Try it out!", link:"https://easter-wegg-app.herokuapp.com"},
               {title:"GitHub Repo", link:"https://github.com/jakobau/easter-wegg-hunt"},
             ]}
             timeline="Mar - Apr 2020"

@@ -31,6 +31,20 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 // Component Imports
 import SkillTag from './SkillTag.jsx';
 
+// Google Analytics track opened project
+function GA_event(title) {
+  console.log("clicked" + title);
+  const sendOutbound = (event) => {
+    event.preventDefault();
+    ReactGA.event({
+      category: 'Projects',
+      action: title,
+      label: title + " project opened",
+      value: 1
+    });
+  }
+}
+
 // Main exported function
 function PortfolioItem(props) {
 
@@ -39,16 +53,8 @@ function PortfolioItem(props) {
 
   const handleChange = () => {
     setOpen((prev) => !prev);
-
-    // Google Analytics track opened project
-    const temp = title + " project opened";
     if(open) {
-      ReactGA.event({
-      category: 'Projects',
-      action: title,
-      label: temp,
-      value: 1
-    });
+      GA_event(title);
     }
   };
 

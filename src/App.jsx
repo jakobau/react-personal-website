@@ -19,15 +19,21 @@ import About from './components/Home/About';
 import Resume from './components/Resume/resume';
 import Portfolio from './components/Home/Portfolio';
 import KeikiHeroes from './components/Home/Projects/KeikiHeroes';
+import Analytics from './components/Analytics';
+import CopyProject from './components/ProjectCopy/YouTube'
 
+// CURRENTLY DISABLED
 // init Google Analytics
-ReactGA.initialize('UA-162783096-1'); 
+//ReactGA.initialize('UA-162783096-1'); 
+
+// new analytic way
+Analytics();
 
 // Main exported function
 export default function App() {
-  useEffect(() => { //onload pageview count
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }, []);
+  //useEffect(() => { //onload pageview count
+    //ReactGA.pageview(window.location.pathname + window.location.search)
+  //}, []);
   return (
     <Router>
       {/* A <Switch> looks through its children <Route>s and
@@ -38,6 +44,7 @@ export default function App() {
         <Route path="/portfolio" ><Portfolio /></Route>
         <Route path="/about" ><About /></Route>
         <Route path="/projects/keikiheroes" ><KeikiHeroes /></Route>
+        <Route path="/projects/copy/youtube" ><CopyProject /></Route>
       </Switch>
     </Router>
   );
