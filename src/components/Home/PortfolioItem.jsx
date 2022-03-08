@@ -32,7 +32,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SkillTag from './SkillTag.jsx';
 
 // Google Analytics track opened project
-function GA_event(title, open) {
+function GA_event(title) {
   console.log("clicked" + title);
   const sendOutbound = (event) => {
     event.preventDefault();
