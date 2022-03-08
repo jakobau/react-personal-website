@@ -7,7 +7,8 @@
 // <<
 
 // REACT Imports
-import React from "react";
+import * as React from 'react';
+import PropTypes from 'prop-types';
 
 // MUI Imports
 import { styled, alpha } from '@mui/material/styles';
@@ -23,6 +24,9 @@ import Menu from '@mui/material/Menu';
 import Divider from '@mui/material/Divider';
 import Avatar from '@mui/material/Avatar';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 // MUI Icon Imports
 import MenuIcon from '@mui/icons-material/Menu';
@@ -34,51 +38,30 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import Cloud from '@mui/icons-material/Cloud';
 
 // COMPONENT and CSS imports
-import video1 from '../../../media/Projects/ProjectCopy/video1.png';
+import video1 from '../../../media/Projects/ProjectCopy/video1.png'
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
-    width: 'auto',
-  },
-}));
+// ELEVATE APP BAR
+// The app bar elevates on scroll to communicate that the user is not at the 
+//    top of the page.
+// https://mui.com/components/app-bar/
+function ElevationScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: window ? window() : undefined,
+  });
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '20ch',
-    },
-  },
-}));
+  return React.cloneElement(children, {
+    elevation: trigger ? 4 : 0,
+  });
+}
 
 
 // Main exported function
-export default function YouTubeCopy() {
+export default function YouTubeCopy(props) {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -203,9 +186,11 @@ export default function YouTubeCopy() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+    <Box sx={{ flexGrow: 1, opacity: 0.98}} style={{ zIndex: 3, position:'relative', }}>
+    <ElevationScroll {...props}>
+      <AppBar position="fixed" color="grey" >
         <Toolbar>
+
           <IconButton
             size="large"
             edge="start"
@@ -215,23 +200,31 @@ export default function YouTubeCopy() {
           >
             <MenuIcon />
           </IconButton>
+
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            Project YouShow
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+
+          <Autocomplete
+            freeSolo
+            options={top100Films}
+            sx={{ 
+              display: { xs: 'none', sm: 'block' },
+              width: { sm: 300, md: 400, lg: 600 }, 
+              position: 'absolute', 
+              left: '35%',
+            }}
+            style={{
+              justifyContent: 'centered',
+            }}
+            renderInput={(params) => <TextField {...params} placeholder="Search" />}
+          />
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
@@ -274,9 +267,20 @@ export default function YouTubeCopy() {
           </Box>
         </Toolbar>
       </AppBar>
+      </ElevationScroll>
       {renderMobileMenu}
       {renderMenu}
     </Box>
   );
 
 }
+
+// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
+const top100Films = [
+  { label: 'Keiki Heroes', year: '2020-2021' },
+  { label: 'Nextech Hawaii', year: '2020-2022' },
+  { label: 'Nalukai Academy', year: '2017-2021' },
+  { label: 'T3 Alliance', year: '2020-2021' },
+  { label: 'Health Together App', year: '2021-Present' },
+  { label: "Easter Wegg Hunt", year: '2020' },
+];

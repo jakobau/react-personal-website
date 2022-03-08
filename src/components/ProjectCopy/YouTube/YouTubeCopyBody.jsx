@@ -14,10 +14,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -40,48 +37,46 @@ function YouTubeCopyBody() {
 
   return (
     <>
-      
-        <AppBar position='relative' color='secondary'>
-          <Toolbar style={{ zIndex: 1 }}>
-            <Stack 
-              direction="row" 
-              spacing={1} 
-              pt={4} 
-              pb={2} 
-              mt={15} 
-              position="fixed" 
-              style={{ 
-                zIndex: 1,
-              }} 
-              style={{ 
-                background: 'white',
-                borderBottom: '1px solid grey',
-                opacity:0.95,
-              }}
-            >
-              <Chip label="All" onClick={handleClick} />
-              <Chip label="Martial arts" variant="outlined" onClick={handleClick} />
-              <Chip label="PVP" variant="outlined" onClick={handleClick} />
-              <Chip label="Impractical Jokers" variant="outlined" onClick={handleClick} />
-              <Chip label="Comedies" variant="outlined" onClick={handleClick} />
-              <Chip label="PUBG" variant="outlined" onClick={handleClick} />
-              <Chip label="Building" variant="outlined" onClick={handleClick} />
-              <Chip label="Comedy" variant="outlined" onClick={handleClick} />
-              <Chip label="Humans" variant="outlined" onClick={handleClick} />
-              <Chip label="Art" variant="outlined" onClick={handleClick} />
-              <Chip label="Computer programming" variant="outlined" onClick={handleClick} />
-              <Chip label="League of Legends" variant="outlined" onClick={handleClick} />
-              <Chip label="Indie games" variant="outlined" onClick={handleClick} />
-              <Chip label="Security hackers" variant="outlined" onClick={handleClick} />
-              <Chip label="Conversation" variant="outlined" onClick={handleClick} />
-              <Chip label="Music" variant="outlined" onClick={handleClick} />
-              <Chip label="Recently uploaded" variant="outlined" onClick={handleClick} />
-            </Stack>
-          </Toolbar>
-        </AppBar>
+      <AppBar position='relative' color='grey' elevation={0}>
+        <Toolbar>
+          <Stack 
+            direction="row" 
+            spacing={1} 
+            pt={2} 
+            pb={2} 
+            mt={16.2} 
+            position="fixed" 
+            style={{ 
+              zIndex: 1,
+              background: 'white',
+              borderTop: '1px solid grey',
+              borderBottom: '1px solid grey',
+              opacity:0.98,
+            }}
+          >
+            <Chip label="All" variant="filled" onClick={handleClick} />
+            <Chip label="ReactJS" variant="outlined" onClick={handleClick} />
+            <Chip label="React Native" variant="outlined" onClick={handleClick} />
+            <Chip label="Python" variant="outlined" onClick={handleClick} />
+            <Chip label="VueJS" variant="outlined" onClick={handleClick} />
+            <Chip label="Firebase" variant="outlined" onClick={handleClick} />
+            <Chip label="AWS" variant="outlined" onClick={handleClick} />
+            <Chip label="Google Analytics" variant="outlined" onClick={handleClick} />
+            <Chip label="Wordpress" variant="outlined" onClick={handleClick} />
+            <Chip label="DiscordJS" variant="outlined" onClick={handleClick} />
+            <Chip label="Virtual Events" variant="outlined" onClick={handleClick} />
+            <Chip label="MaterialUI" variant="outlined" onClick={handleClick} />
+            <Chip label="Bootstrap" variant="outlined" onClick={handleClick} />
+            <Chip label="TypeScript" variant="outlined" onClick={handleClick} />
+            <Chip label="Redux" variant="outlined" onClick={handleClick} />
+            <Chip label="HTML/CSS" variant="outlined" onClick={handleClick} />
+            <Chip label="Recently updated" variant="outlined" onClick={handleClick} />
+          </Stack>
+        </Toolbar>
+      </AppBar>
 
-      <Container maxWidth='xl'>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{mt:12}} style={{zIndex: 3}}>
+      <Container maxWidth='xl' style={{ zIndex: 1 }}>
+        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{mt:12}} >
           <Grid item xs={2.8}>
             <ActionCard 
               media={video1}
