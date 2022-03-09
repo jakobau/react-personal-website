@@ -8,9 +8,9 @@
 
 // REACT imports
 import React from 'react';
-import ReactGA from 'react-ga';
-import { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+//import ReactGA from 'react-ga';
+//import { useEffect } from 'react';
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 // COMPONENT and CSS imports
 import './App.css';
@@ -31,22 +31,20 @@ Analytics();
 
 // Main exported function
 export default function App() {
-  //useEffect(() => { //onload pageview count
-    //ReactGA.pageview(window.location.pathname + window.location.search)
-  //}, []);
   return (
-    <Router>
-      {/* A <Switch> looks through its children <Route>s and
-          renders the first one that matches the current URL. */}
-      <Switch>
-        <Route exact path="/" ><Home /></Route>
-        <Route path="/resume" ><Resume /></Route>
-        <Route path="/portfolio" ><Portfolio /></Route>
-        <Route path="/about" ><About /></Route>
-        <Route path="/projects/keikiheroes" ><KeikiHeroes /></Route>
-        <Route path="/projects/copy/youtube" ><CopyProject /></Route>
-      </Switch>
-    </Router>
+    <>
+      <HashRouter basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route exact path="/" ><Home /></Route>
+          <Route path="/resume" ><Resume /></Route>
+          <Route path="/portfolio" ><Portfolio /></Route>
+          <Route path="/about" ><About /></Route>
+          <Route exact path="/projects" ><CopyProject /></Route>
+          <Route path="/projects/keikiheroes" ><KeikiHeroes /></Route>
+          <Route path="/projects/youtube" ><CopyProject /></Route>
+        </Switch>
+      </HashRouter>
+    </>
   );
 }
 
