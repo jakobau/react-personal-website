@@ -72,7 +72,7 @@ function YouTubeCopyDrawer() {
         <Divider />
 
         <List>
-          {['Home', 'Explore', 'Shorts', 'Subscriptions'].map((text, index) => (
+          {['Back to Home', 'GitHub Repo', 'Shorts', 'Subscriptions'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -216,27 +216,25 @@ function YouTubeCopyDrawer() {
             <ListItemText
               primary=""
               secondary={
-                <React.Fragment>
+                <>
                   <Typography variant="body2" color="text.primary" >
-                    About Press Copyright
-                  </Typography>
-                  <Typography variant="body2" color="text.primary" >
-                    Contact us Creators
+                    Design and features inspired by YouTube.
                   </Typography>
                   <Typography variant="body2" color="text.primary" sx={{ mb:2, }}>
-                    Advertise Developers
+                    Built with ReactJS, MaterialUI, and Persistence.
+                  </Typography>
+
+                  <Typography variant="body2" color="text.primary" >
+                    LinkedIn
                   </Typography>
                   <Typography variant="body2" color="text.primary" >
-                    Terms Privacy Policy & Safety
-                  </Typography>
-                  <Typography variant="body2" color="text.primary" >
-                    How YouTube works
+                    Instagram
                   </Typography>
                   <Typography variant="body2" color="text.primary" sx={{ mb:2, }} >
-                    Test new features
+                    Personal Website
                   </Typography>
                   © 2022 Built by <Link href="www.jakobau.me" underline="hover" target="_blank">Jakob Au</Link>
-                </React.Fragment>
+                </>
               }
             />
           </ListItem>

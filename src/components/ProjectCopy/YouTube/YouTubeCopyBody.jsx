@@ -21,13 +21,28 @@ import Toolbar from '@mui/material/Toolbar';
 
 // COMPONENT and CSS imports
 import ActionCard from './ActionCard.jsx';
-import video1 from '../../../media/Projects/ProjectCopy/video1.png';
-import video2 from '../../../media/Projects/ProjectCopy/video2.png';
-import video3 from '../../../media/Projects/ProjectCopy/video3.png';
-import video4 from '../../../media/Projects/ProjectCopy/video4.png';
-import video5 from '../../../media/Projects/ProjectCopy/video5.png';
-import video6 from '../../../media/Projects/ProjectCopy/video6.png';
-import video7 from '../../../media/Projects/ProjectCopy/video7.png';
+import keikiheroes1 from '../../../media/projectPictures/keikiHeroes_pic1.png';
+import t3Alliance1 from '../../../media/projectPictures/t3Alliance_pic1.png';
+import personalProjectPic1 from '../../../media/projectPictures/personalProject_pic1.png';
+import nextechPic1 from '../../../media/projectPictures/nextech_pic1.png';
+import healthTogetherPic1 from '../../../media/projectPictures/healthTogether_pic1.png';
+import weggHuntGif1 from '../../../media/projectPictures/weggHunt.gif';
+import personalProjectGif1 from '../../../media/projectPictures/personalWebsite_gif1.gif';
+import youShowPic1 from '../../../media/Projects/ProjectCopy/youShowPic1.png';
+import ikanosPic1 from '../../../media/Projects/ProjectCopy/ikanosPic1.png';
+import aeropestPic1 from '../../../media/Projects/ProjectCopy/aeropestPic1.png';
+
+// Changable Links
+const PersonalProjectLink = "https://www.jakobau.me"
+const IkanosMarketingLink = "https://drexel.edu/baiada/companies/current/Ikanos%20Marketing/";
+const DrexelUniversityLink = "https://drexel.edu";
+const KeikiHeroesLink = "https://www.keikiheroes.org/";
+const NalukaiLink = "https://www.nalukai.org/";
+const GumDesignLink = "https://www.gumdesign.com/";
+const T3allianceLink = "https://www.t3alliance.org/";
+const InstagramLink = "https://www.instagram.com/jakob.au/?hl=en";
+const LinkedInLink = "http://linkedin.com/in/jakob-au";
+const GitHubLink = "http://github.com/jakobau";
 
 // Main exported function
 function YouTubeCopyBody() {
@@ -79,63 +94,72 @@ function YouTubeCopyBody() {
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{mt:12}} >
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video1}
-              title='Fighters That Showed Incredible SELF-CONTROL'
-              channelName="ONE Championship"
+              media={keikiheroes1}
+              title='CoFounder of Keiki Heroes Program'
+              channelName="Keiki Heroes"
               views="4.2M"
               dateUploaded="2 months"
             />
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video2}
-              title='WE TRIED RAIDING WITH IT'
-              channelName="Shacy"
+              media={t3Alliance1}
+              title='Discord Manager, R&D, Event Planner, Zoom Host @ T3 Alliance'
+              channelName="T3 Alliance"
               views="112K"
               dateUploaded="3 months"
             />
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video3}
-              title='Impractical Jokers 2022 FUNNIEST MOMENTS # 64'
-              channelName="Chat 207"
+              media={nextechPic1}
+              title='Nextech STEM Virtual Teacher, Event Planner, Developer'
+              channelName="NexTech Hawaii"
               views="4.4K"
               dateUploaded="15 hours"
             />
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video4}
-              title='My Fake Picasso Went to Auction at $1.4 Million'
-              channelName="VICE"
+              media={healthTogetherPic1}
+              title='Creator of Health Together App'
+              channelName="Personal Project"
               views="1.7M"
               dateUploaded="1 year"
             />
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video5}
-              title='Most Useless Megaprojects in the World'
-              channelName="Top Luxury"
+              media={personalProjectGif1}
+              title='Creator of Personal ReactJS Website'
+              channelName="Personal Project"
               views="29M"
               dateUploaded="3 months"
             />
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video6}
-              title='Wardruna - Kvitravn (White Raven) - Official music video'
-              channelName="wardruna"
+              media={youShowPic1}
+              title='Creator of Project YouShow - Cloning Youtube'
+              channelName="Personal Project"
               views="13M"
               dateUploaded="1 year"
             />
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video7}
-              title='Nick Diaz Being Nick Diaz'
-              channelName="UFC - Ultimate Fighting Championship"
+              media={ikanosPic1}
+              title='CTO @ Ikanos Freelancing'
+              channelName="Student Startup"
+              views="2.1M"
+              dateUploaded="6 months"
+            />
+          </Grid>
+          <Grid item xs={2.8}>
+            <ActionCard 
+              media={aeropestPic1}
+              title='Lead Researcher and Developer @ Ikanos Freelancing'
+              channelName="Student Startup"
               views="2.1M"
               dateUploaded="6 months"
             />
@@ -153,13 +177,13 @@ function YouTubeCopyBody() {
         />
 
         <Typography variant="h6" pt={4} pb={4} pl={1} sx={{}}>
-          Top News
+          Recent Updates
         </Typography>
 
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} pb={2}>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video1}
+              media={youShowPic1}
               title='Fighters That Showed Incredible SELF-CONTROL'
               channelName="ONE Championship"
               views="4.2M"
@@ -168,7 +192,7 @@ function YouTubeCopyBody() {
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video2}
+              media={youShowPic1}
               title='WE TRIED RAIDING WITH IT'
               channelName="Shacy"
               views="112K"
@@ -177,7 +201,7 @@ function YouTubeCopyBody() {
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video3}
+              media={youShowPic1}
               title='Impractical Jokers 2022 FUNNIEST MOMENTS # 64'
               channelName="Chat 207"
               views="4.4K"
@@ -186,7 +210,7 @@ function YouTubeCopyBody() {
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video4}
+              media={youShowPic1}
               title='My Fake Picasso Went to Auction at $1.4 Million'
               channelName="VICE"
               views="1.7M"
@@ -208,7 +232,7 @@ function YouTubeCopyBody() {
         <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} pt={5}>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video6}
+              media={youShowPic1}
               title='Wardruna - Kvitravn (White Raven) - Official music video'
               channelName="wardruna"
               views="13M"
@@ -217,7 +241,7 @@ function YouTubeCopyBody() {
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video7}
+              media={youShowPic1}
               title='Nick Diaz Being Nick Diaz'
               channelName="UFC - Ultimate Fighting Championship"
               views="2.1M"
@@ -226,7 +250,7 @@ function YouTubeCopyBody() {
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video5}
+              media={youShowPic1}
               title='Most Useless Megaprojects in the World'
               channelName="Top Luxury"
               views="29M"
@@ -235,7 +259,7 @@ function YouTubeCopyBody() {
           </Grid>
           <Grid item xs={2.8}>
             <ActionCard 
-              media={video6}
+              media={youShowPic1}
               title='Wardruna - Kvitravn (White Raven) - Official music video'
               channelName="wardruna"
               views="13M"

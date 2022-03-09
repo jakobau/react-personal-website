@@ -38,6 +38,7 @@ const StyledAvatar = styled(Card)`
       delay: 700,
       duration: 500,
     })};
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   `}
 `;
@@ -64,7 +65,7 @@ export default function ActionAreaCard(props) {
           </Typography>
           
           <Typography variant="body2" color="text.secondary">
-            {views} vews · {dateUploaded} ago
+            {views} views · {dateUploaded} ago
           </Typography>
         </CardContent>
       </CardActionArea>
