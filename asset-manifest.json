@@ -1,32 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.a56aabb1.css",
-    "main.js": "/static/js/main.e88a3c7f.js",
+    "main.js": "/static/js/main.497cc6e5.js",
     "static/media/weggHunt.gif": "/static/media/weggHunt.b13b3d8fd02125f47701.gif",
     "static/media/nextech_pic1.png": "/static/media/nextech_pic1.bf077855e10fdf0f50d5.png",
     "static/media/personalWebsite_gif1.gif": "/static/media/personalWebsite_gif1.de8d10fa843a1c54dd0d.gif",
+    "static/media/aeropestPic1.png": "/static/media/aeropestPic1.561468fd89f105c3ded1.png",
     "static/media/t3Alliance_pic1.png": "/static/media/t3Alliance_pic1.ae09eefb6d55eb50ea1f.png",
     "static/media/personalProject_pic1.png": "/static/media/personalProject_pic1.839e900311023982f116.png",
     "static/media/keikiHeroes_pic1.png": "/static/media/keikiHeroes_pic1.0dcbbc56c383b874a1b1.png",
+    "static/media/youShowPic1.png": "/static/media/youShowPic1.016add951413c3e61f47.png",
     "static/media/healthTogether_pic1.png": "/static/media/healthTogether_pic1.6dd37fbe410e1317f269.png",
     "static/media/me_picture2.jpg": "/static/media/me_picture2.2bcdc00e1b75e967d6f4.jpg",
-    "static/media/video2.png": "/static/media/video2.0caae5435d9acec0c3e9.png",
-    "static/media/video1.png": "/static/media/video1.1bcbe307f5f6417b65ba.png",
-    "static/media/video4.png": "/static/media/video4.9d84a0d48f7096e7716c.png",
-    "static/media/video7.png": "/static/media/video7.81f863d1e6e6503d284e.png",
+    "static/media/ikanosPic1.png": "/static/media/ikanosPic1.68da9ce5153b619e79ad.png",
     "static/media/software_engineer_resume.pdf": "/static/media/software_engineer_resume.55ac03b498635aeaedfd.pdf",
-    "static/media/video5.png": "/static/media/video5.1b4d728b3248ce08b236.png",
-    "static/media/video3.png": "/static/media/video3.3657c845a4ed3da602fe.png",
-    "static/media/video6.png": "/static/media/video6.df5a170d578f7ab8b4f4.png",
     "static/media/me_picture.JPG": "/static/media/me_picture.37767f35aa7a77d9b974.JPG",
     "static/media/linkedln_icon.png": "/static/media/linkedln_icon.404c8c9a6c72377bc434.png",
     "static/media/github_icon.svg": "/static/media/github_icon.9c0b26d398b6096b583700f91bfb7312.svg",
     "index.html": "/index.html",
     "main.a56aabb1.css.map": "/static/css/main.a56aabb1.css.map",
-    "main.e88a3c7f.js.map": "/static/js/main.e88a3c7f.js.map"
+    "main.497cc6e5.js.map": "/static/js/main.497cc6e5.js.map"
   },
   "entrypoints": [
     "static/css/main.a56aabb1.css",
-    "static/js/main.e88a3c7f.js"
+    "static/js/main.497cc6e5.js"
   ]
 }
