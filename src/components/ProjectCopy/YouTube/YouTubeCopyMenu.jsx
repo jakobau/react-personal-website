@@ -186,7 +186,7 @@ export default function YouTubeCopy(props) {
   );
 
   return (
-    <Box sx={{ flexGrow: 1, opacity: 0.98}} style={{ zIndex: 3, position:'relative', }}>
+    <Box sx={{ flexGrow: 1, opacity: 0.98}} style={{ zIndex: 10, position:'relative', }}>
     <ElevationScroll {...props}>
       <AppBar position="fixed" color="grey" >
         <Toolbar>

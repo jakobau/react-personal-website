@@ -47,7 +47,7 @@ function YouTubeCopyBody() {
             mt={16.2} 
             position="fixed" 
             style={{ 
-              zIndex: 1,
+              zIndex: 5,
               background: 'white',
               borderTop: '1px solid grey',
               borderBottom: '1px solid grey',
