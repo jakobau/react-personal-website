@@ -38,7 +38,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import Cloud from '@mui/icons-material/Cloud';
 
 // COMPONENT and CSS imports
-import video1 from '../../../media/Projects/ProjectCopy/video1.png'
+
 
 // ELEVATE APP BAR
 // The app bar elevates on scroll to communicate that the user is not at the 
@@ -106,7 +106,7 @@ export default function YouTubeCopy(props) {
           p:1,
         }}
       >
-        <Avatar alt="Jake" src={video1} />
+        <Avatar alt="Jake" src='' />
         <Box p={1}>
           <Typography variant="body1">Jakob Au </Typography>
           <Typography variant="body2" color="blue">Manage your Google Account</Typography>
