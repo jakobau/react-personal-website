@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 //get icons
-import githubIcon from '../../media/github_icon.svg';
-import linkedlnIcon from '../../media/linkedln_icon.png';
-import mePic from '../../media/me_picture.JPG';
-import emailIcon from '../../media/email_icon.png';
+import githubIcon from '../../../Media/github_icon.svg';
+import linkedlnIcon from '../../../Media/linkedln_icon.png';
+import mePic from '../../../Media/me_picture.JPG';
+import emailIcon from '../../../Media/email_icon.png';
 
 //Just name
 function Name() {

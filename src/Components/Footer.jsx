@@ -9,10 +9,11 @@
 
 // REACT imports
 import * as React from 'react';
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 
 // MUI Imports
+import config from '../Config/config.json'
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -22,24 +23,24 @@ import Link from '@mui/material/Link';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+//import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from '@mui/icons-material/Language';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 // Google Analytics tracking links clicked
 function GA_event(name) {
-  const sendOutbound = (event) => {
+  /*const sendOutbound = (event) => {
     event.preventDefault();
     ReactGA.event({
       category: 'Links',
       action: name,
       label: name + ' link clicked'
     });
-  }
+  }*/
 }
 
 function Footer(props) {
-  const { description, title } = props;
+  const { description, title, version } = props;
 
   function Copyright() {
     return (
@@ -49,16 +50,17 @@ function Footer(props) {
         <Link onClick={GA_event("instagram")} color="inherit" href="https://www.instagram.com/jakob.au/?hl=en"><InstagramIcon></InstagramIcon></Link>
         <Link color="inherit" href="https://www.jakobau.me"><LanguageIcon></LanguageIcon></Link>
         <Link onClick={GA_event("github_personal_website")} color="inherit" href="https://github.com/jakobau/react-personal-website"><GitHubIcon></GitHubIcon></Link>
-        <br></br>
-        {'Copyright '} &copy;&nbsp;
-        {new Date().getFullYear()}&nbsp;
+        <br />
+        {version}, <Link href={config.notionPages.Changelog} color="inherit">Version Changelog</Link>
+        <br />
+        Built by Jakob Au, hosted by&nbsp;
+        <Link onClick={GA_event("github_personal_website")} href="https://github.com/jakobau/react-personal-website" color="inherit">GitHub Pages</Link>
+        <br />
+        {'Copyright '} &copy; {new Date().getFullYear()}&nbsp;
         <Link color="inherit" href="www.jakobau.me">
           Jakob Au
         </Link>
         {'. All Rights Reserved'}
-        <br></br>
-        Built by Jakob Au, Hosted by&nbsp;
-        <Link onClick={GA_event("github_personal_website")} href="https://github.com/jakobau/react-personal-website" color="inherit">GitHub Pages</Link>
       </Typography>
 
     );

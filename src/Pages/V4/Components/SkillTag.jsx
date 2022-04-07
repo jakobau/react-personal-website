@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
 import { alpha } from '@mui/material/styles';
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+//import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 function SkillTag(props) {
   const { title, color } = props;

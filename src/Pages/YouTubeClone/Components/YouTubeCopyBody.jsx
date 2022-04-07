@@ -21,18 +21,19 @@ import Toolbar from '@mui/material/Toolbar';
 
 // COMPONENT and CSS imports
 import ActionCard from './ActionCard.jsx';
-import keikiheroes1 from '../../../media/projectPictures/keikiHeroes_pic1.png';
-import t3Alliance1 from '../../../media/projectPictures/t3Alliance_pic1.png';
-import personalProjectPic1 from '../../../media/projectPictures/personalProject_pic1.png';
-import nextechPic1 from '../../../media/projectPictures/nextech_pic1.png';
-import healthTogetherPic1 from '../../../media/projectPictures/healthTogether_pic1.png';
-import weggHuntGif1 from '../../../media/projectPictures/weggHunt.gif';
-import personalProjectGif1 from '../../../media/projectPictures/personalWebsite_gif1.gif';
-import youShowPic1 from '../../../media/Projects/ProjectCopy/youShowPic1.png';
-import ikanosPic1 from '../../../media/Projects/ProjectCopy/ikanosPic1.png';
-import aeropestPic1 from '../../../media/Projects/ProjectCopy/aeropestPic1.png';
+import keikiheroes1 from '../../../Media/projectPictures/keikiHeroes_pic1.png';
+import t3Alliance1 from '../../../Media/projectPictures/t3Alliance_pic1.png';
+//import personalProjectPic1 from '../../../Media/projectPictures/personalProject_pic1.png';
+import nextechPic1 from '../../../Media/projectPictures/nextech_pic1.png';
+import healthTogetherPic1 from '../../../Media/projectPictures/healthTogether_pic1.png';
+//import weggHuntGif1 from '../../../Media/projectPictures/weggHunt.gif';
+import personalProjectGif1 from '../../../Media/projectPictures/personalWebsite_gif1.gif';
+import youShowPic1 from '../../../Media/Projects/ProjectCopy/youShowPic1.png';
+import ikanosPic1 from '../../../Media/Projects/ProjectCopy/ikanosPic1.png';
+import aeropestPic1 from '../../../Media/Projects/ProjectCopy/aeropestPic1.png';
 
 // Changable Links
+/*
 const PersonalProjectLink = "https://www.jakobau.me"
 const IkanosMarketingLink = "https://drexel.edu/baiada/companies/current/Ikanos%20Marketing/";
 const DrexelUniversityLink = "https://drexel.edu";
@@ -43,6 +44,7 @@ const T3allianceLink = "https://www.t3alliance.org/";
 const InstagramLink = "https://www.instagram.com/jakob.au/?hl=en";
 const LinkedInLink = "http://linkedin.com/in/jakob-au";
 const GitHubLink = "http://github.com/jakobau";
+*/
 
 // Main exported function
 function YouTubeCopyBody() {

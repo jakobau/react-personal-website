@@ -10,18 +10,21 @@
 import * as React from 'react';
 
 // MUI Imports
-import { styled, alpha } from '@mui/material/styles';
+import { CardActionArea } from '@mui/material';
+
+import { styled, } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+/*
 import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
 } from '@mui/material/styles';
 import NoSsr from '@mui/material/NoSsr';
 import Avatar from '@mui/material/Avatar';
+*/
 
 // MUI Icon Imports
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -44,7 +47,7 @@ const StyledAvatar = styled(Card)`
 `;
 
 export default function ActionAreaCard(props) {
-  const { media, icon, title, time, channelName, views, dateUploaded } = props;
+  const { media, /*icon,*/ title, /*time,*/ channelName, views, dateUploaded } = props;
 
   return (
     <StyledAvatar elevation={0}>

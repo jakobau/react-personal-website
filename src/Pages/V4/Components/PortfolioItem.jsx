@@ -9,18 +9,18 @@
 
 // REACT imports
 import * as React from 'react';
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 
 // MUI Imports
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Grow from '@mui/material/Grow';
-import Switch from '@mui/material/Switch';
+//import Button from '@mui/material/Button';
+//import Grow from '@mui/material/Grow';
+//import Switch from '@mui/material/Switch';
 import Slide from '@mui/material/Slide';
-import ButtonBase from '@mui/material/ButtonBase';
-import { styled } from '@mui/material/styles';
+//import ButtonBase from '@mui/material/ButtonBase';
+//import { styled } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 
 // MUI Icon Imports
@@ -34,7 +34,7 @@ import SkillTag from './SkillTag.jsx';
 // Google Analytics track opened project
 function GA_event(title) {
   console.log("clicked" + title);
-  const sendOutbound = (event) => {
+  /*const sendOutbound = (event) => {
     event.preventDefault();
     ReactGA.event({
       category: 'Projects',
@@ -42,13 +42,13 @@ function GA_event(title) {
       label: title + " project opened",
       value: 1
     });
-  }
+  }*/
 }
 
 // Main exported function
 function PortfolioItem(props) {
 
-  const { title, role, index, projectNumber, description, media, projectRoute, skills, idea, links, timeline } = props;
+  const { title, role, index, projectNumber, description, media, /*projectRoute,*/ skills, idea, links, timeline } = props;
   const [open, setOpen] = React.useState(true);
 
   const handleChange = () => {
@@ -156,6 +156,7 @@ function PortfolioItem(props) {
           >
             <Link onClick={handleChange} style={{ textDecoration: 'none', color: 'inherit', cursor: 'pointer' }} >
               <img
+                alt={title}
                 src={media}
                 style={{ borderBottomLeftRadius: 4, borderBottomRightRadius: 4, height:'100%', overflow: 'hidden' }}
               />

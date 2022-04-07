@@ -10,8 +10,7 @@
 // REACT Imports
 import React from "react";
 import { useRef } from "react";
-import ReactGA from 'react-ga';
-import './Styles/Home.css';
+//import ReactGA from 'react-ga';
 
 // MUI Imports
 import Container from '@mui/material/Container';
@@ -19,49 +18,48 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import Tooltip from '@mui/material/Tooltip';
+//import Tooltip from '@mui/material/Tooltip';
 import Box from '@mui/material/Box';
-import { alpha } from '@mui/material/styles';
+//import { alpha } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
 
 // MUI Icon Imports
-import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+//import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+//import InstagramIcon from '@mui/icons-material/Instagram';
+//import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LanguageIcon from '@mui/icons-material/Language';
+//import TwitterIcon from '@mui/icons-material/Twitter';
+//import LanguageIcon from '@mui/icons-material/Language';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 // Component Imports
-import Footer from './Footer.jsx';
-import Hyperlink from './Hyperlink.jsx';
-import SkillTag from './SkillTag.jsx';
-import PortfolioItem from './PortfolioItem.jsx';
+import Footer from '../../Components/Footer.jsx';
+import NavMenu from '../../Components/Menu.jsx';
+import PortfolioItem from './Components/PortfolioItem.jsx';
 
 // Media imports
-import mePic from '../../media/me_picture.JPG';
-import mePic2 from '../../media/me_picture2.jpg';
-import keikiheroes1 from '../../media/projectPictures/keikiHeroes_pic1.png';
-import t3Alliance1 from '../../media/projectPictures/t3Alliance_pic1.png';
-import personalProjectPic1 from '../../media/projectPictures/personalProject_pic1.png';
-import nextechPic1 from '../../media/projectPictures/nextech_pic1.png';
-import healthTogetherPic1 from '../../media/projectPictures/healthTogether_pic1.png';
-import weggHuntGif1 from '../../media/projectPictures/weggHunt.gif';
-import personalProjectGif1 from '../../media/projectPictures/personalWebsite_gif1.gif';
+//import mePic from '../../Media/me_picture.JPG';
+import mePic2 from '../../Media/me_picture2.jpg';
+import keikiheroes1 from '../../Media/projectPictures/keikiHeroes_pic1.png';
+import t3Alliance1 from '../../Media/projectPictures/t3Alliance_pic1.png';
+//import personalProjectPic1 from '../../Media/projectPictures/personalProject_pic1.png';
+import nextechPic1 from '../../Media/projectPictures/nextech_pic1.png';
+import healthTogetherPic1 from '../../Media/projectPictures/healthTogether_pic1.png';
+import weggHuntGif1 from '../../Media/projectPictures/weggHunt.gif';
+import personalProjectGif1 from '../../Media/projectPictures/personalWebsite_gif1.gif';
 
 // Changable Links
 const PersonalProjectLink = "https://www.jakobau.me"
-const IkanosMarketingLink = "https://drexel.edu/baiada/companies/current/Ikanos%20Marketing/";
-const DrexelUniversityLink = "https://drexel.edu";
+//const IkanosMarketingLink = "https://drexel.edu/baiada/companies/current/Ikanos%20Marketing/";
+//const DrexelUniversityLink = "https://drexel.edu";
 const KeikiHeroesLink = "https://www.keikiheroes.org/";
-const NalukaiLink = "https://www.nalukai.org/";
-const GumDesignLink = "https://www.gumdesign.com/";
-const T3allianceLink = "https://www.t3alliance.org/";
-const InstagramLink = "https://www.instagram.com/jakob.au/?hl=en";
-const LinkedInLink = "http://linkedin.com/in/jakob-au";
+//const NalukaiLink = "https://www.nalukai.org/";
+//const GumDesignLink = "https://www.gumdesign.com/";
+//const T3allianceLink = "https://www.t3alliance.org/";
+//const InstagramLink = "https://www.instagram.com/jakob.au/?hl=en";
+//const LinkedInLink = "http://linkedin.com/in/jakob-au";
 const GitHubLink = "http://github.com/jakobau";
 
 // CURRENTLY DISABLED
@@ -82,8 +80,6 @@ function GA_event(name) {
 export default function Home() {
 
   const [showProjects, setShowProjects] = React.useState(false);
-  const projectOpen = () => setShowProjects(true);
-  const projectClose = () => setShowProjects(false);
 
   const projectsRef = useRef(null);
   const experiencesRef = useRef(null);
@@ -268,7 +264,7 @@ export default function Home() {
     } else {
 
       return(
-        <Link  onClick={GA_event("scroll down")} onClick={scrollDown} style={{ color: 'inherit', }} >
+        <Link onClick={scrollDown} style={{ color: 'inherit', }} >
           <Box
             sx={{
               display: 'flex',
@@ -305,6 +301,7 @@ export default function Home() {
     <Container fixed maxWidth="lg">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+      <NavMenu />
       
       {/* picture profile first block */}
       <Box
@@ -330,18 +327,18 @@ export default function Home() {
             order: 2,
           }}
         >
-          <Box component="span" sx={{ fontSize: { xs: 40, sm: 50, md: 50, lg: 70,}, mt: {sx:1, md:20} }}>
+          <Box component="span" sx={{ fontSize: { xs: 40, sm: 50, md: 50, lg: 70, }, mt: { sx: 1, md: 20 } }}>
             Aloha, I'm Jake.
           </Box>
-          <Box component="span" sx={{ fontSize: { xs: 30, sm: 40, md: 45, lg: 70,}, mt: 1 }}>
+          <Box component="span" sx={{ fontSize: { xs: 30, sm: 40, md: 45, lg: 70, }, mt: 1 }}>
             I'm a web developer.
           </Box>
           <Box 
             component="span" 
             sx={{ 
             color: 'primary.main', 
-            fontSize: {xs:20,sm:20,md:22,lg:22}, 
-            mt: 3, mr:1, ml:1,
+            fontSize: { xs: 20, sm: 20, md: 22, lg: 22 }, 
+            mt: 3, mr: 1, ml: 1,
           }}>
             <Typography variant="h5">
               I have 1+ years of web development experience. I've had intermediate level practice with ReactJS, VueJS, 
@@ -355,20 +352,20 @@ export default function Home() {
             <Box 
               component="span" 
               sx={{ 
-                mt: 3, mr:1, ml:1 
+                mt: 3, mr: 1, ml: 1 
               }}
             >
               <Box
                 sx={{ 
                   display: 'flex',
                   flexDirection: 'row', 
-                  fontSize: {xs:20,sm:20,md:22,lg:22}, 
+                  fontSize: { xs: 20, sm: 20, md: 22, lg: 22 }, 
                 }}
               >
-              <Link onClick={GA_event("linkedin")} color="inherit" href="http://linkedin.com/in/jakob-au">
+              <Link onClick={ GA_event("linkedin") } color="inherit" href="http://linkedin.com/in/jakob-au">
                 <LinkedInIcon fontSize="large"></LinkedInIcon>
               </Link>
-              <Link onClick={GA_event("github_personal_website")} color="inherit" href="https://github.com/jakobau/react-personal-website">
+              <Link onClick={ GA_event("github_personal_website") } color="inherit" href="https://github.com/jakobau/react-personal-website">
                 <GitHubIcon fontSize="large"></GitHubIcon>
               </Link>
               <Typography variant="h5" mt={0.5} ml={1}>Jakob Au</Typography>
@@ -388,13 +385,13 @@ export default function Home() {
             order: {sx:1,md:2},
           }}
         >
-          <Stack direction="row" spacing={2} justifyContent="center" mt={{ xs: 0, sm: 0, md: 10, lg: 10,}} >
+          <Stack direction="row" spacing={2} justifyContent="center" mt={{ xs: 0, sm: 0, md: 10, lg: 10, }} >
             <Avatar 
               alt="Jakob Au" 
-              src={mePic2} 
+              src={ mePic2 } 
               sx={{ 
-                width: { xs: 200, sm: 200, md: 320, lg: 350,}, 
-                height: { xs: 200, sm: 200, md: 320, lg: 350,} 
+                width: { xs: 200, sm: 200, md: 320, lg: 350, }, 
+                height: { xs: 200, sm: 200, md: 320, lg: 350, } 
               }}
             />
 
