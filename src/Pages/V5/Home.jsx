@@ -9,9 +9,11 @@
 
 // REACT Imports
 import React from "react";
-//import { useRef } from "react";
+import { useState } from "react";
 //import ReactGA from 'react-ga';
 import './Styles/home.css';
+import { useSpring, animated, Spring } from 'react-spring'
+import styled from "styled-components";
 
 // MUI Imports
 import Container from '@mui/material/Container';
@@ -40,10 +42,12 @@ import NavMenu from '../../Components/Menu.jsx';
 import CustomCard from '../../Components/CustomCard.jsx';
 import Footer from '../../Components/Footer.jsx';
 import ProjectList from '../../Components/ProjectList.jsx';
+import GalleryPics from './Components/GalleryPics.jsx';
 
 // Media imports
-//import mePic from '../../Media/me_picture.JPG';
-import mePic2 from '../../Media/me_picture3.jpg';
+import mePic1 from '../../Media/me_picture.JPG';
+import mePic2 from '../../Media/me_picture2.jpg';
+import mePic3 from '../../Media/me_picture3.jpg';
 //import keikiheroes1 from '../../Media/projectPictures/keikiHeroes_pic1.png';
 //import t3Alliance1 from '../../Media/projectPictures/t3Alliance_pic1.png';
 //import personalProjectPic1 from '../../Media/projectPictures/personalProject_pic1.png';
@@ -58,6 +62,45 @@ import theme from "../../Config/ColorTheme.jsx";
 
 const colorTheme = createTheme(theme);
 
+const Icons = styled.div`
+  background: primary.main;
+  transition: all 0.25s ease-out;
+  &:hover {
+    transform: perspective(500px) rotateX(15deg) rotateY(20deg) rotateZ(-15deg);
+    filter: drop-shadow(0 1px 5px grey);
+  }
+  &:nth-of-type(even):hover {
+    transform: perspective(500px) rotateX(15deg) rotateY(-20deg) rotateZ(15deg);
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+function AnimatedHand(){
+  const [flip, setFlip] = useState(false)
+  const {props} = useSpring({
+    to: { props:0 },
+    from: { props:1 },
+    reset: true,
+    reverse: flip,
+    delay: 200,
+  })
+
+  return <animated.h1 
+    style={{transform: props
+      .interpolate({
+        range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+        output: [180, 220, 180, 220, 180, 220, 180, 200]
+      })
+      .interpolate(props => `translate3d(${props}px, 0px, 0px)`)}}
+    sx={{ 
+      position:'relative', 
+      fontSize: { xs: 35, sm: 35, md: 50, lg: 50, } 
+    }}>👋🏼</animated.h1>
+}
+
 // Main exported function
 export default function Home() {
   return (
@@ -66,8 +109,9 @@ export default function Home() {
       <ThemeProvider theme={colorTheme}>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+
         <NavMenu />
-        
+
         {/* picture profile first block */}
         <Box
           sx={{
@@ -91,7 +135,7 @@ export default function Home() {
           >
             <Box component="span" sx={{ mt: { xs: 1, md: 10 }, textAlign: {xs:"center", sm:"center", md:"left", lg:"left" } }}>
               <Typography variant="body1" color="primary.dark" sx={{ fontSize: { xs: 35, sm: 35, md: 50, lg: 50, }, }}>
-              👋🏼 Aloha! I'm Jake.
+              {/*<AnimatedHand />*/} 👋🏼 Aloha! I'm Jake.
               </Typography>
             </Box>
             <Box 
@@ -125,7 +169,7 @@ export default function Home() {
             <Stack direction="row" spacing={2} justifyContent="center" mt={{ xs: 0, sm: 0, md: 10, lg: 10, }}>
               <Avatar 
                 alt="Jakob Au" 
-                src={ mePic2 } 
+                src={ mePic3 } 
                 sx={{ 
                   width: { xs: 200, sm: 200, md: 250, lg: 300, }, 
                   height: { xs: 200, sm: 200, md: 250, lg: 300, },
@@ -149,26 +193,26 @@ export default function Home() {
             pb:5,
           }}
         >
-          <CustomCard 
+          <Icons><CustomCard 
             title="Web Developer"
             description="I build full-stack web apps in React and React Native. In 2020 I interned at Gum Design for 6 
             months and completed multiple personal projects."
             linkTitle="Portfolio"
             link=""
-          />
-          <CustomCard 
+          /></Icons>
+          <Icons><CustomCard 
             title="Entrepreneur"
             description="Helper of Keiki Heroes, involved with Nalukai Academy, and member of two student start-ups 
             (Ikanos Freelancing and AeroPest LLC)."
             linkTitle="LinkedIn"
             link=""
-          />
-          <CustomCard 
+          /></Icons>
+          <Icons><CustomCard 
             title="Virtual Event Tech Coordinator"
             description="Hire me as a technical virtual events coordinator - planning, organizing, and hosting virtual events."
             linkTitle="Contact"
             link=""
-          />
+          /></Icons>
         </Box>
 
         <Divider variant="middle" sx={{ mt:5 }} />
@@ -182,41 +226,44 @@ export default function Home() {
           Show more
         </Typography>
 
-        <Divider variant="middle" sx={{ mt:5 }} />
+        <Divider variant="middle" sx={{ mt:5,mb:10 }} />
 
         {/* About Me */}
         <Box sx={{
           display: 'flex',
           flexDirection: 'row',
-          alignItems: { xs: 'center'},
+          flexWrap: 'wrap',
+          justifyContent: 'space-around',
           m: 3,
         }}>
-          <Box sx={{width:'50%'}}>
+          <Box sx={{width:{xs:'90%', sm:'90%',md:400,lg:500}, mb:{xs:4,sm:4}, }}>
             <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
               About Me
             </Typography>
 
             <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
-              I am currently a student @ [DREXEL UNIVERSITY](https://drexel.edu/) pursuing a Software Engineering BSSE 
-              and an Entrepreneur minor. I'm CTO at Ikanos Marketing and Lead Researcher at AeroPest LLC, both student 
-              start-ups incubating at Drexel University. I also do web design and event hosting freelance work on the side.
+              I grew up playing sports throughout High School and still continue to play 🏀 basketball and 🏐 beach volleyball. I 
+              enjoy running, working out, board games, movies, and personal projects.
             </Typography>
 
             <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
-              In 2020 I helped start [KEIKI HEROES](https://www.keikiheroes.org/), a program empowering Hawaii's children 
-              during the pandemic to stay healthy and build resilience beyond it. I built the inital website, designed their 
-              initial posters, and shared Kai and Hoku to the community in Hawai'i. Around that time I've also participanted 
-              and lead as a group leader at [NALUKAI ACADEMY](https://www.nalukai.org/), a free intensive leadership camp for 
-              Hawai'i high school students focused on technological, cultural & social entrepreneurship. I continue to stay 
-              connected to my origin even though I am thousands of miles away.
+              In 2020 I helped start 👪 KEIKI HEROES, a program empowering Hawaii's children during the pandemic to stay healthy and 
+              build resilience beyond it. I built the inital website, designed their initial posters, and shared Kai and Hoku to 
+              the community in Hawai'i. Around that time I've also participanted and lead as a group leader at 🚀 NALUKAI ACADEMY, a 
+              free intensive leadership camp for Hawai'i high school students focused on technological, cultural & social 
+              entrepreneurship. I will continue to stay connected to home even though I live thousands of miles away.
+            </Typography>
+
+            <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
+              I love my family and have created fun ways to stay connected to them. Health Together and Easter Wegg Hunt are my family's 
+              favorite projects. I am currently working on Health Together.
             </Typography>
           </Box>
-          <Box sx={{width:'50%', height:'auto', textAlign:'center', border:1}}>
-            test
-          </Box>
+          
+          <GalleryPics srcs={[mePic1,mePic2,mePic3]} titles={['mepic1', 'mepic2', 'mepic3']}/>
         </Box>
 
-        <Divider variant="middle" sx={{ mt:15 }} />
+        <Divider variant="middle" sx={{ mt:5 }} />
 
         {/* Footer */}
         <Footer 
