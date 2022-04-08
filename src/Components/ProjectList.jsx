@@ -39,13 +39,14 @@ import personalProjectGif1 from '../Media/projectPictures/personalWebsite_gif1.g
 import youtube1 from '../Media/projectPictures/youtube_pic1.png';
 
 const colorTheme = createTheme(theme);
+const listHeight = 'auto';
 
 export default function ProjectList() {
     return (
-            <ImageList sx={{  height: 'auto' }}>
+            <ImageList sx={{ height: {listHeight} }}>
                 {itemData.map((item) => (
                     <ThemeProvider theme={colorTheme}>
-                        <ImageListItem key={item.img} sx={{ m:{xs:1,sm:1,md:3,lg:3}, borderRadius:3, boxShadow:{xs:5,sm:5,md:11,lg:11}}} >
+                        <ImageListItem key={item.img} sx={{ m:{xs:1,sm:1,md:2,lg:3}, borderRadius:3, boxShadow:{xs:5,sm:5,md:7,lg:11}}} >
                             <img
                                 src={`${item.img}?w=248&fit=crop&auto=format`}
                                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
