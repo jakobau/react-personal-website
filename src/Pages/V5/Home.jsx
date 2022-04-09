@@ -1,6 +1,6 @@
 // >>
 // Project Name: Jakob Au's Personal Website
-// Version 4.0.1
+// Version 5.0.1
 // Create by Jakob Au
 // Name: Home.js
 // Purpose: Landing Page. Brief introduction, social media links, and showcase
@@ -43,11 +43,16 @@ import CustomCard from '../../Components/CustomCard.jsx';
 import Footer from '../../Components/Footer.jsx';
 import ProjectList from '../../Components/ProjectList.jsx';
 import GalleryPics from './Components/GalleryPics.jsx';
+import CustomTimeline from './Components/CustomTimeline.jsx';
+import CardStack from './Components/CardStack.tsx';
 
 // Media imports
 import mePic1 from '../../Media/me_picture.JPG';
 import mePic2 from '../../Media/me_picture2.jpg';
 import mePic3 from '../../Media/me_picture3.jpg';
+import Card1 from '../../Media/v5_pictures/Card1.svg';
+import Card2 from '../../Media/v5_pictures/Card2.svg';
+import Card3 from '../../Media/v5_pictures/Card3.svg';
 //import keikiheroes1 from '../../Media/projectPictures/keikiHeroes_pic1.png';
 //import t3Alliance1 from '../../Media/projectPictures/t3Alliance_pic1.png';
 //import personalProjectPic1 from '../../Media/projectPictures/personalProject_pic1.png';
@@ -226,7 +231,7 @@ export default function Home() {
           Show more
         </Typography>
 
-        <Divider variant="middle" sx={{ mt:5,mb:10 }} />
+        <Divider variant="middle" sx={{ mt:5 }} />
 
         {/* About Me */}
         <Box sx={{
@@ -234,9 +239,9 @@ export default function Home() {
           flexDirection: 'row',
           flexWrap: 'wrap',
           justifyContent: 'space-around',
-          m: 3,
+          xIndex: 1,
         }}>
-          <Box sx={{width:{xs:'90%', sm:'90%',md:400,lg:500}, mb:{xs:4,sm:4}, }}>
+          <Box sx={{width:{xs:'90%', sm:'90%', md:400,lg:500}, mb:{xs:4,sm:4}, mt:{xs:50,sm:50,md:10,lg:10} }}>
             <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
               About Me
             </Typography>
@@ -260,9 +265,19 @@ export default function Home() {
             </Typography>
           </Box>
           
-          <GalleryPics srcs={[mePic1,mePic2,mePic3]} titles={['mepic1', 'mepic2', 'mepic3']}/>
+          {/*<GalleryPics srcs={[Card1,Card2,Card3]} titles={['mepic1', 'mepic2', 'mepic3']}/>*/}
+          <Box sx={{ width:100, }}></Box>
+          <CardStack />
+          
         </Box>
 
+        <Divider variant="middle" sx={{ mt:5 }} />
+
+        <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:5, ml: { xs:0, sm:0, md:5, lg:5 }}}>
+          Work Experience Timeline
+        </Typography>
+        <CustomTimeline />
+          
         <Divider variant="middle" sx={{ mt:5 }} />
 
         {/* Footer */}
