@@ -12,24 +12,16 @@
 import * as React from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import styled from "styled-components";
 
 // MUI Imports
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import CircleIcon from '@mui/icons-material/Circle';
 import IconButton from '@mui/material/IconButton';
-
 import CardMedia from '@mui/material/CardMedia';
 
-// Media imports
-import mePic from '../../../Media/me_picture3.jpg';
-import { ConstructionOutlined } from '@mui/icons-material';
-
-
+// Main Exported Function
 function GalleryPics(props) {
     const { srcs, titles } = props;
     const height = {xs:'20vh', sm:'30vh', md:'40vh', lg:'50vh'};

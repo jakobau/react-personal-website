@@ -32,7 +32,7 @@ export default function App() {
           <Route path="/v2" ><V2 /></Route>
           <Route path="/v3" ><V3 /></Route>
           <Route path="/v4" ><V4 /></Route>
-          <Route path="/v4" ><V5 /></Route>
+          <Route path="/v5" ><V5 /></Route>
           <Route path="/youtube" ><YouTube /></Route>
         </Switch>
       </HashRouter>
