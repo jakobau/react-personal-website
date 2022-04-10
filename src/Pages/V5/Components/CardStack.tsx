@@ -13,10 +13,9 @@ import { useSprings, animated, to as interpolate } from '@react-spring/web'
 import { useDrag } from 'react-use-gesture'
 
 import styles from '../Styles/styles.module.css'
-import Card1 from '../../../Media/v5_pictures/Card1.svg';
-import Card2 from '../../../Media/v5_pictures/Card2.svg';
-import Card3 from '../../../Media/v5_pictures/Card3.svg';
-import { display } from '@mui/system';
+import Card1 from '../../../Media/v5_pictures/1.png';
+import Card2 from '../../../Media/v5_pictures/2.png';
+import Card3 from '../../../Media/v5_pictures/3.png';
 
 import Box from '@mui/material/Box';
 

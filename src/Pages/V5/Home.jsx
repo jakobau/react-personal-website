@@ -9,10 +9,10 @@
 
 // REACT Imports
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 //import ReactGA from 'react-ga';
 import './Styles/home.css';
-import { useSpring, animated, Spring } from 'react-spring'
+import { useSpring, animated, useTransition } from 'react-spring'
 import styled from "styled-components";
 
 // MUI Imports
@@ -39,20 +39,17 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // Component Imports
 import NavMenu from '../../Components/Menu.jsx';
-import CustomCard from '../../Components/CustomCard.jsx';
+import CustomCard from './Components/CustomCard.jsx';
 import Footer from '../../Components/Footer.jsx';
-import ProjectList from '../../Components/ProjectList.jsx';
+import ProjectList from './Components/ProjectList.jsx';
 import GalleryPics from './Components/GalleryPics.jsx';
 import CustomTimeline from './Components/CustomTimeline.jsx';
 import CardStack from './Components/CardStack.tsx';
 
 // Media imports
-import mePic1 from '../../Media/me_picture.JPG';
-import mePic2 from '../../Media/me_picture2.jpg';
+//import mePic1 from '../../Media/me_picture.JPG';
+//import mePic2 from '../../Media/me_picture2.jpg';
 import mePic3 from '../../Media/me_picture3.jpg';
-import Card1 from '../../Media/v5_pictures/Card1.svg';
-import Card2 from '../../Media/v5_pictures/Card2.svg';
-import Card3 from '../../Media/v5_pictures/Card3.svg';
 //import keikiheroes1 from '../../Media/projectPictures/keikiHeroes_pic1.png';
 //import t3Alliance1 from '../../Media/projectPictures/t3Alliance_pic1.png';
 //import personalProjectPic1 from '../../Media/projectPictures/personalProject_pic1.png';
@@ -64,9 +61,11 @@ import Card3 from '../../Media/v5_pictures/Card3.svg';
 // Changable Links
 import config from "../../Config/config.json";
 import theme from "../../Config/ColorTheme.jsx";
+import { symbolName } from "typescript";
 
 const colorTheme = createTheme(theme);
 
+// Animated Card on:hover
 const Icons = styled.div`
   background: primary.main;
   transition: all 0.25s ease-out;
@@ -108,6 +107,63 @@ function AnimatedHand(){
 
 // Main exported function
 export default function Home() {
+
+  // https://stackoverflow.com/questions/61398942/react-spring-transition-achieve-a-progressive-delay-in-the-entry-of-each-elemen
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  // https://react-spring.io/hooks/use-spring#usespring
+  // Animated Custom Cards useSpring
+  const [styles1, api1] = useSpring(() => ({
+    from: { transform: 'perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)' },
+    config: { duration: 400, },
+  }))
+  const [styles2, api2] = useSpring(() => ({
+    from: { transform: 'perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)' },
+    config: { duration: 400, },
+  }))
+  const [styles3, api3] = useSpring(() => ({
+    from: { transform: 'perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)' },
+    config: { duration: 400, },
+  }))
+
+  useEffect(() => {
+
+    // Trailed animated cards
+    async function startAnimations() {
+      await sleep(7000)
+      await api1.start({
+        to: async (next, cancel) => {
+          await next({ transform: 'perspective(500px) rotateX(5deg) rotateY(10deg) rotateZ(-5deg)' })
+          await next({ transform: 'perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)' })
+          await sleep(7000);
+        },
+        loop: {reverse: true },
+      })
+      await sleep(200)
+      await api2.start({
+        to: async (next, cancel) => {
+          await next({ transform: 'perspective(500px) rotateX(5deg) rotateY(10deg) rotateZ(-5deg)' })
+          await next({ transform: 'perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)' })
+          await sleep(7000);
+        },
+        loop: {reverse: true },
+      })
+      await sleep(200)
+      await api3.start({
+        to: async (next, cancel) => {
+          await next({ transform: 'perspective(500px) rotateX(5deg) rotateY(10deg) rotateZ(-5deg)' })
+          await next({ transform: 'perspective(500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)' })
+          await sleep(7000);
+        },
+        loop: {reverse: true },
+      })
+    }
+    startAnimations()
+    
+  })
+
   return (
     <>
     <Container fixed maxWidth="lg">
@@ -198,26 +254,26 @@ export default function Home() {
             pb:5,
           }}
         >
-          <Icons><CustomCard 
+          <animated.div style={styles1}><Icons><CustomCard 
             title="Web Developer"
             description="I build full-stack web apps in React and React Native. In 2020 I interned at Gum Design for 6 
             months and completed multiple personal projects."
             linkTitle="Portfolio"
             link=""
-          /></Icons>
-          <Icons><CustomCard 
+          /></Icons></animated.div>
+          <animated.div style={styles2}><Icons><CustomCard 
             title="Entrepreneur"
             description="Helper of Keiki Heroes, involved with Nalukai Academy, and member of two student start-ups 
             (Ikanos Freelancing and AeroPest LLC)."
             linkTitle="LinkedIn"
             link=""
-          /></Icons>
-          <Icons><CustomCard 
+          /></Icons></animated.div>
+          <animated.div style={styles3}><Icons><CustomCard 
             title="Virtual Event Tech Coordinator"
             description="Hire me as a technical virtual events coordinator - planning, organizing, and hosting virtual events."
             linkTitle="Contact"
             link=""
-          /></Icons>
+          /></Icons></animated.div>
         </Box>
 
         <Divider variant="middle" sx={{ mt:5 }} />
