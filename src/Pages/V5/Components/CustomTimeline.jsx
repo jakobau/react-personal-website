@@ -22,10 +22,6 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import Typography from '@mui/material/Typography';
 
 // MUI Icon Imports
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
 import WebIcon from '@mui/icons-material/Web';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import IntegrationInstructionsIcon from '@mui/icons-material/IntegrationInstructions';
