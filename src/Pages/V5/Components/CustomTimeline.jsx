@@ -37,6 +37,28 @@ export default function CustomTimeline() {
       <TimelineItem>
         <TimelineOppositeContent
           sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2022
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
+          <TimelineDot color="secondary">
+            <IntegrationInstructionsIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span" color="secondary.dark" fontSize={hFontSize}>
+            Arizona State University
+          </Typography>
+          <Typography color="primary.light" fontSize={pFontSize}>Transfered to ASU Polytechnic's Software Engineering program</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
           align="right"
           variant="body2"
           color="text.secondary"
@@ -45,13 +67,14 @@ export default function CustomTimeline() {
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
-          <TimelineDot color="secondary">
+          <TimelineDot color="primary" variant="outlined">
             <RocketLaunchIcon />
           </TimelineDot>
           <TimelineConnector sx={{ bgcolor: 'secondary.main' }} />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span" color="secondary.dark" fontSize={hFontSize}>
+          <Typography variant="h6" component="span" color="primary
+          .dark" fontSize={hFontSize}>
             Joined Two Student Startups
           </Typography>
           <Typography color="primary.light" fontSize={pFontSize}>Ikanos Freelancing and AeroPest</Typography>
@@ -98,7 +121,7 @@ export default function CustomTimeline() {
           <Typography variant="h6" component="span" color="primary.dark" fontSize={hFontSize}>
             Keiki Heroes
           </Typography>
-          <Typography color="primary.light" fontSize={pFontSize}>Kickstarted Keiki Heroes Program</Typography>
+          <Typography color="primary.light" fontSize={pFontSize}>Cofounding Volunteer for Keiki Heroes Program</Typography>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
@@ -121,6 +144,28 @@ export default function CustomTimeline() {
             Web Developer
           </Typography>
           <Typography color="primary.light" fontSize={pFontSize}>Interned at Gum Design for 6 months</Typography>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent
+          sx={{ m: 'auto 0' }}
+          variant="body2"
+          color="text.secondary"
+        >
+          2018
+        </TimelineOppositeContent>
+        <TimelineSeparator>
+          <TimelineConnector />
+          <TimelineDot color="primary" variant="outlined">
+            <FamilyRestroomIcon />
+          </TimelineDot>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <Typography variant="h6" component="span" color="primary.dark" fontSize={hFontSize}>
+            Drexel University
+          </Typography>
+          <Typography color="primary.light" fontSize={pFontSize}>Fresh college student studying Software Engineering in Philadelphia, PA</Typography>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

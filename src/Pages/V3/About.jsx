@@ -129,6 +129,7 @@ function About() {
       <Footer
         title=""
         description=""
+        version="V3.0"
       />
 
     </Container>

@@ -408,6 +408,7 @@ export default function Home() {
       <Footer 
         title=""
         description=""
+        version="V4.0"
       />
       
     </Container>

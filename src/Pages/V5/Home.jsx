@@ -128,6 +128,10 @@ export default function Home() {
     config: { duration: 400, },
   }))
 
+  // Project List CallBack
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const changeProject = (i) => { setSelectedProjectIndex(i) }
+
   useEffect(() => {
 
     // Trailed animated cards
@@ -208,7 +212,7 @@ export default function Home() {
               ml: { xs: 3, sm: 3, md: 0, lg: 0, },
             }}>
               <Typography variant="body2" sx= {{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, }}>
-                I'm from the 🌺 Big Island of Hawaii, a 📚 Software Engineering Student at Drexel University, and a part-time 💻 Freelance Web Developer & Virtual Event Host.
+                🌺 I'm from the Big Island of Hawaii, 📚 studying Software Engineering at Arizona State University, and 💻 a Freelance Web Developer & Virtual Event Host.
               </Typography>
               <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt: { xs:2, sm:2, md:3, lg:3 }}}>
                 Welcome to my website! Keep scrolling to learn more about me. 👇🏽
@@ -241,10 +245,69 @@ export default function Home() {
           </Box>
         </Box>
 
-        {/*<Divider variant="middle" sx={{ mt:5 }} />*/}
+        <Divider variant="middle" sx={{ mt:5 }} />
 
-        {/* Action Cards*/}
-        <Box
+        {/* Latest Projects */}
+
+        <ProjectList project={{selectedProjectIndex}} />
+        <Typography variant="body2" sx={{ textAlign:'center' }}>
+          Show more
+        </Typography>
+
+        <Divider variant="middle" sx={{ mt:5 }} />
+
+        {/* About Me */}
+        <Box sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'space-around',
+          xIndex: 1,
+        }}>
+          <Box sx={{width:{xs:'90%', sm:'90%', md:400,lg:500}, mb:{xs:4,sm:4}, mt:{xs:5,sm:5,md:10,lg:10} }}>
+            <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
+              About Me
+            </Typography>
+
+            <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
+              I grew up playing sports throughout High School and still continue to play 🏀 basketball and 🏐 beach volleyball. I 
+              enjoy running, working out, board games, movies, and personal projects.
+            </Typography>
+
+            <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
+              In 2020 I helped start 👪 KEIKI HEROES, a program empowering Hawaii's children during the pandemic to stay healthy and 
+              build resilience beyond it. I built the inital website, designed their initial posters, and shared Kai and Hoku to 
+              the community in Hawai'i. Around that time I've also participanted and lead as a group leader at 🚀 NALUKAI ACADEMY, a 
+              free intensive leadership camp for Hawai'i high school students focused on technological, cultural & social 
+              entrepreneurship. I will continue to stay connected to home even though I live thousands of miles away.
+            </Typography>
+
+            <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
+              I love my family and have created fun ways to stay connected to them. Health Together and Easter Wegg Hunt are my family's 
+              favorite projects. I am currently working on Health Together.
+            </Typography>
+          </Box>
+          
+          {/*
+          <GalleryPics srcs={[Card1,Card2,Card3]} titles={['mepic1', 'mepic2', 'mepic3']}/>
+          <Box sx={{ width:100, }}></Box>
+          <CardStack />
+          */}
+          
+        </Box>
+
+        <Divider variant="middle" sx={{ mt:5 }} />
+        
+        {/* Life Timeline */}
+        <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:5, ml: { xs:0, sm:0, md:5, lg:5 }}}>
+          Life Timeline
+        </Typography>
+        <CustomTimeline />
+          
+        <Divider variant="middle" sx={{ mt:5 }} />
+
+         {/* Action Cards CURRENTLY DISABLED*/}
+         <Box
           sx={{
             display: 'flex',
             flexDirection: 'row',
@@ -275,72 +338,13 @@ export default function Home() {
             link=""
           /></Icons></animated.div>
         </Box>
-
-        <Divider variant="middle" sx={{ mt:5 }} />
-
-        {/* Latest Projects */}
-        <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:5, ml: { xs:0, sm:0, md:5, lg:5 }}}>
-          Latest Projects
-        </Typography>
-        <ProjectList />
-        <Typography variant="body2" sx={{ textAlign:'center' }}>
-          Show more
-        </Typography>
-
-        <Divider variant="middle" sx={{ mt:5 }} />
-
-        {/* About Me */}
-        <Box sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
-          xIndex: 1,
-        }}>
-          <Box sx={{width:{xs:'90%', sm:'90%', md:400,lg:500}, mb:{xs:4,sm:4}, mt:{xs:50,sm:50,md:10,lg:10} }}>
-            <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
-              About Me
-            </Typography>
-
-            <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
-              I grew up playing sports throughout High School and still continue to play 🏀 basketball and 🏐 beach volleyball. I 
-              enjoy running, working out, board games, movies, and personal projects.
-            </Typography>
-
-            <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
-              In 2020 I helped start 👪 KEIKI HEROES, a program empowering Hawaii's children during the pandemic to stay healthy and 
-              build resilience beyond it. I built the inital website, designed their initial posters, and shared Kai and Hoku to 
-              the community in Hawai'i. Around that time I've also participanted and lead as a group leader at 🚀 NALUKAI ACADEMY, a 
-              free intensive leadership camp for Hawai'i high school students focused on technological, cultural & social 
-              entrepreneurship. I will continue to stay connected to home even though I live thousands of miles away.
-            </Typography>
-
-            <Typography variant="body2" sx= {{ fontSize: { xs: 16, sm: 16, md: 16, lg: 16 }, mt:2, ml: { xs:0, sm:0, md:2, lg:2 }}}>
-              I love my family and have created fun ways to stay connected to them. Health Together and Easter Wegg Hunt are my family's 
-              favorite projects. I am currently working on Health Together.
-            </Typography>
-          </Box>
-          
-          {/*<GalleryPics srcs={[Card1,Card2,Card3]} titles={['mepic1', 'mepic2', 'mepic3']}/>*/}
-          <Box sx={{ width:100, }}></Box>
-          <CardStack />
-          
-        </Box>
-
-        <Divider variant="middle" sx={{ mt:5 }} />
-
-        <Typography variant="body2" sx={{ textAlign: {xs:"center", sm:"center", md:"left", lg:"left" }, fontSize: { xs: 16, sm: 16, md: 21, lg: 21 }, mt:5, ml: { xs:0, sm:0, md:5, lg:5 }}}>
-          Work Experience Timeline
-        </Typography>
-        <CustomTimeline />
-          
-        <Divider variant="middle" sx={{ mt:5 }} />
+        {/**/}
 
         {/* Footer */}
         <Footer 
           title=""
           description=""
-          version={config.currentVersion}
+          version="V5.0"
         />
       </ThemeProvider>
     </Container>

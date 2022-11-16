@@ -5,7 +5,7 @@ import Section from './Components/section';
 import Profile from './Components/profile';
 import Skills from './Components/skills';
 import Experience from './Components/experience';
-import Footer from './Components/footer';
+import Footer from '../../Components/Footer.jsx';
 
 //images
 import resumePDF from '../../Media/software_engineer_resume.pdf';
@@ -21,7 +21,11 @@ const Resume = () => {
         <Experience />
         <a href={ resumePDF } target="_blank" rel="noopener noreferrer">Resume</a>
       </header>
-      <Footer />
+      <Footer
+        title=""
+        description=""
+        version="V2.0"
+      />
     </div>
   );
 }
