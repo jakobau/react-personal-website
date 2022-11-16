@@ -1,28 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.a56aabb1.css",
-    "main.js": "/static/js/main.497cc6e5.js",
+    "main.css": "/static/css/main.00ceac81.css",
+    "main.js": "/static/js/main.999795af.js",
     "static/media/weggHunt.gif": "/static/media/weggHunt.b13b3d8fd02125f47701.gif",
     "static/media/nextech_pic1.png": "/static/media/nextech_pic1.bf077855e10fdf0f50d5.png",
     "static/media/personalWebsite_gif1.gif": "/static/media/personalWebsite_gif1.de8d10fa843a1c54dd0d.gif",
+    "static/media/2.png": "/static/media/2.303859f6799982061f09.png",
+    "static/media/3.png": "/static/media/3.b2cb841c92e034ef9ce2.png",
     "static/media/aeropestPic1.png": "/static/media/aeropestPic1.561468fd89f105c3ded1.png",
     "static/media/t3Alliance_pic1.png": "/static/media/t3Alliance_pic1.ae09eefb6d55eb50ea1f.png",
     "static/media/personalProject_pic1.png": "/static/media/personalProject_pic1.839e900311023982f116.png",
     "static/media/keikiHeroes_pic1.png": "/static/media/keikiHeroes_pic1.0dcbbc56c383b874a1b1.png",
     "static/media/youShowPic1.png": "/static/media/youShowPic1.016add951413c3e61f47.png",
+    "static/media/youtube_pic1.png": "/static/media/youtube_pic1.016add951413c3e61f47.png",
+    "static/media/me_picture3.jpg": "/static/media/me_picture3.637ca825397325d217c4.jpg",
     "static/media/healthTogether_pic1.png": "/static/media/healthTogether_pic1.6dd37fbe410e1317f269.png",
     "static/media/me_picture2.jpg": "/static/media/me_picture2.2bcdc00e1b75e967d6f4.jpg",
     "static/media/ikanosPic1.png": "/static/media/ikanosPic1.68da9ce5153b619e79ad.png",
     "static/media/software_engineer_resume.pdf": "/static/media/software_engineer_resume.55ac03b498635aeaedfd.pdf",
+    "static/media/1.png": "/static/media/1.ec1e2529ae532b6d9274.png",
     "static/media/me_picture.JPG": "/static/media/me_picture.37767f35aa7a77d9b974.JPG",
     "static/media/linkedln_icon.png": "/static/media/linkedln_icon.404c8c9a6c72377bc434.png",
+    "static/media/logo.png": "/static/media/logo.7b88eb4344b65aafb8c0.png",
     "static/media/github_icon.svg": "/static/media/github_icon.9c0b26d398b6096b583700f91bfb7312.svg",
     "index.html": "/index.html",
-    "main.a56aabb1.css.map": "/static/css/main.a56aabb1.css.map",
-    "main.497cc6e5.js.map": "/static/js/main.497cc6e5.js.map"
+    "main.00ceac81.css.map": "/static/css/main.00ceac81.css.map",
+    "main.999795af.js.map": "/static/js/main.999795af.js.map"
   },
   "entrypoints": [
-    "static/css/main.a56aabb1.css",
-    "static/js/main.497cc6e5.js"
+    "static/css/main.00ceac81.css",
+    "static/js/main.999795af.js"
   ]
 }
