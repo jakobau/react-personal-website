@@ -1,32 +1,25 @@
 // >>
 // Project Name: Jakob Au's Personal Website
-// Version 4.0.1
+// Version 5.0.0
 // Create by Jakob Au
 // Name: App.js
-// Purpose: Main App.js script mainly for routing.
+// Purpose: Main App.js script for routing.
 // <<
 
 // REACT imports
 import React from 'react';
-//import ReactGA from 'react-ga';
-//import { useEffect } from 'react';
 import { HashRouter, Route, Switch } from "react-router-dom";
 
 // COMPONENT and CSS imports
 import './App.css';
-import Home from './components/Home/Home';
-import About from './components/Home/About';
-import Resume from './components/Resume/resume';
-import Portfolio from './components/Home/Portfolio';
-import KeikiHeroes from './components/Home/Projects/KeikiHeroes';
-import Analytics from './components/Analytics';
-import CopyProject from './components/ProjectCopy/YouTube'
+import Analytics from './Components/Analytics';
+import V2 from './Pages/V2';
+import V3 from './Pages/V3';
+import V4 from './Pages/V4';
+import V5 from './Pages/V5';
+import YouTube from './Pages/YouTubeClone';
 
-// CURRENTLY DISABLED
-// init Google Analytics
-//ReactGA.initialize('UA-162783096-1'); 
-
-// new analytic way
+// google analytics
 Analytics();
 
 // Main exported function
@@ -35,13 +28,12 @@ export default function App() {
     <>
       <HashRouter basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route exact path="/" ><Home /></Route>
-          <Route path="/resume" ><Resume /></Route>
-          <Route path="/portfolio" ><Portfolio /></Route>
-          <Route path="/about" ><About /></Route>
-          <Route exact path="/projects" ><CopyProject /></Route>
-          <Route path="/projects/keikiheroes" ><KeikiHeroes /></Route>
-          <Route path="/projects/youtube" ><CopyProject /></Route>
+          <Route exact path="/" ><V5 /></Route>
+          <Route path="/v2" ><V2 /></Route>
+          <Route path="/v3" ><V3 /></Route>
+          <Route path="/v4" ><V4 /></Route>
+          <Route path="/v5" ><V5 /></Route>
+          <Route path="/youtube" ><YouTube /></Route>
         </Switch>
       </HashRouter>
     </>

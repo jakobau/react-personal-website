@@ -1,0 +1,21 @@
+{
+    "currentVersion": "V4.0.1",
+    "googleAnalyticsID": "UA-162783096-1",
+    "linkList" : {
+        "PersonalProjectLink": "https://www.jakobau.me",
+        "IkanosMarketingLink": "https://drexel.edu/baiada/companies/current/Ikanos%20Marketing/",
+        "DrexelUniversityLink": "https://drexel.edu",
+        "KeikiHeroesLink": "https://www.keikiheroes.org/",
+        "NalukaiLink": "https://www.nalukai.org/",
+        "GumDesignLink": "https://www.gumdesign.com/",
+        "T3allianceLink": "https://www.t3alliance.org/",
+        "InstagramLink": "https://www.instagram.com/jakob.au/?hl=en",
+        "LinkedInLink": "http://linkedin.com/in/jakob-au",
+        "GitHubLink": "http://github.com/jakobau"
+    },
+    "notionPages" : {
+        "Changelog" : "",
+        "Articles": "",
+        "Guides": ""
+    }
+}
